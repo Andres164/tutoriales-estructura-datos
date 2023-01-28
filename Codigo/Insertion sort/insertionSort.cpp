@@ -13,21 +13,25 @@ void imprimirArreglo(int arreglo[], int numElementos)
     for(int i = 0; i < numElementos; i++)
         cout << "Arreglo[" << i << "] =" << arreglo[i] << endl;
 }
-
-int main()
+void selectionSort(int arreglo[], numElementos)
 {
-    int n = 10;
-    int arreglo[n] = {2, 4, 5, 1, 9, 10, 8, 3, 7, 6};
-    for(int i = 0; i < n; i++)
+    for(int i = 1; i < numElementos; i++)
     {
-        int indexElementoMenor = i;
-        for(int j = i+1; j < n; j++)
+        for(int j = i-1; j >= 0; j--)
         {
-            if(arreglo[j] < arreglo[indexElementoMenor])
-                indexElementoMenor = j;
+            if(arreglo[i] < arreglo[j])
+            {
+                intercambiarElementos(arreglo, i, j);
+            }
+            else
+                break;
         }
-        intercambiarElementos(arreglo, i, indexElementoMenor);
     }
-    imprimirArreglo(arreglo, n);
+}
+
+int main ()
+{
+
+
     return 0;
 }
