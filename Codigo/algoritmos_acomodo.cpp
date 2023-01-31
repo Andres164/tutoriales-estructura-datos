@@ -1,3 +1,4 @@
+#include <iostream>
 #include "algoritmos_acomodo.h"
 #include "manejo_arreglos.h"
 
@@ -32,25 +33,28 @@ namespace algoritmos_acomodo
     }
     void mergeSort(int arreglo[], int numElementos)
     {
-        int numElementosIzquierda, numElementosDerecha;
+        int numElementosIzquierda = 1, numElementosDerecha = 1;
         int* arregloDerecha;
         if(numElementos > 1)
         {
             numElementosIzquierda = numElementos / 2;
             arregloDerecha = arreglo+numElementosIzquierda;
-            numElementosDerecha = numElementosIzquierda - numElementos;
+            numElementosDerecha = numElementos - numElementosIzquierda;
             mergeSort(arreglo, numElementosIzquierda);
             mergeSort(arregloDerecha, numElementosDerecha);
         }
-        unirArreglosAcomodados(arreglo, numElementosIzquierda, arregloDerecha, numElementosDerecha);
+        arreglo = unirArreglosAcomodados(arreglo, numElementosIzquierda, arregloDerecha, numElementosDerecha);
     }
     int* unirArreglosAcomodados(int arreglo1[], int numElementosArr1, int arreglo2[], int numElementosArr2)
     {
         int numElementos = numElementosArr1 + numElementosArr2;
         int arregloUnido[numElementos];
         int i = 0, j = 0;
+        //std::cout << "Before while" << std::endl;
+        std::cout << numElementos << std::endl;
         do
         {
+            //std::cout << "inside while" << std::endl;
             if(arreglo1[i] < arreglo2[j])
             {
                 arregloUnido[i+j] = arreglo1[i];
@@ -62,6 +66,7 @@ namespace algoritmos_acomodo
                 j++;
             }
         } while( i+j < (numElementosArr1 + numElementosArr2) -1 );
+        //std::cout << "After while" << std::endl;
         return arregloUnido;
     }
 }

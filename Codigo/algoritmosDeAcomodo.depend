@@ -22,14 +22,15 @@
 
 1675137568 d:\repositorios\tutoriales-estructura-datos\codigo\manejo_arreglos.h
 
-1675142895 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1675203391 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	"algoritmos_acomodo.h"
 	"manejo_arreglos.h"
 
 1675142430 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmos_acomodo.h
 
-1675143037 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmos_acomodo.cpp
+1675203073 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmos_acomodo.cpp
+	<iostream>
 	"algoritmos_acomodo.h"
 	"manejo_arreglos.h"
 
