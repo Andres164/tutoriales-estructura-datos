@@ -43,7 +43,11 @@ namespace algoritmos_acomodo
             mergeSort(arreglo, numElementosIzquierda);
             mergeSort(arregloDerecha, numElementosDerecha);
         }
-        arreglo = unirArreglosAcomodados(arreglo, numElementosIzquierda, arregloDerecha, numElementosDerecha);
+        if (numElementos > 1)
+        {
+            int* arregloUnido = unirArreglosAcomodados(arreglo, numElementosIzquierda, arregloDerecha, numElementosDerecha);
+            manejo_arreglos::copiarArreglo(arreglo, arregloUnido, numElementos);
+        }
 
     }
     int* unirArreglosAcomodados(int arreglo1[], int numElementosArr1, int arreglo2[], int numElementosArr2)
@@ -68,8 +72,6 @@ namespace algoritmos_acomodo
             arregloUnido[i+j] = arreglo1[i];
         for( ; j < numElementosArr2; j++)
             arregloUnido[i+j] = arreglo2[j];
-        manejo_arreglos::imprimirArreglo(arregloUnido, numElementos);
-        std::cout << std::endl;
         return arregloUnido;
     }
 }

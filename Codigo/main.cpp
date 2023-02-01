@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    int n = 9;
+    int n = 10;
 
     /*
     int* arreglo;
@@ -16,7 +16,7 @@ int main()
     arreglo2 = algoritmos_acomodo::unirArreglosAcomodados(new int(5), 1, new int(1), 1);
     arreglo = algoritmos_acomodo::unirArreglosAcomodados(arreglo1, 2, arreglo2, 2);
     */
-    int arreglo[n] = {2, 4, 5, 1, 9, 10, 8, 3, 7};
+    int arreglo[n] = {2, 12, 52, 12, 900, 10, 8, 3, 1, 7};
     algoritmos_acomodo::mergeSort(arreglo, n);
     manejo_arreglos::imprimirArreglo(arreglo, n);
     return 0;
