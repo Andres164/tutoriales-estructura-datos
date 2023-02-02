@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1675363001 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
+	<iostream>
+	"manejoArreglos.h"
+
+1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
+
+1584205420 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+	<iostream>
+

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace manejo_arreglos
+namespace manejoArreglos
 {
     void intercambiarElementos(int[], int, int);
     void imprimirArreglo(int[], int);

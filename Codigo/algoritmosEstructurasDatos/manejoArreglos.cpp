@@ -1,7 +1,7 @@
 #include <iostream>
-#include "manejo_arreglos.h"
+#include "manejoArreglos.h"
 
-namespace manejo_arreglos
+namespace manejoArreglos
 {
     void intercambiarElementos(int arreglo[], int index1, int index2)
     {

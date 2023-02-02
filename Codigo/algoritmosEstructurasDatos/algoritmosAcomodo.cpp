@@ -1,8 +1,8 @@
 #include <iostream>
-#include "algoritmos_acomodo.h"
-#include "manejo_arreglos.h"
+#include "algoritmosAcomodo.h"
+#include "manejoArreglos.h"
 
-namespace algoritmos_acomodo
+namespace algoritmosAcomodo
 {
     void selectionSort(int arreglo[], int numElementos)
     {
@@ -14,7 +14,7 @@ namespace algoritmos_acomodo
                 if(arreglo[j] < arreglo[indexElementoMenor])
                     indexElementoMenor = j;
             }
-            manejo_arreglos::intercambiarElementos(arreglo, i, indexElementoMenor);
+            manejoArreglos::intercambiarElementos(arreglo, i, indexElementoMenor);
         }
     }
     void insertionSort(int arreglo[], int numElementos)
@@ -25,7 +25,7 @@ namespace algoritmos_acomodo
             {
                 int indexPorAcomodar = j+1;
                 if(arreglo[indexPorAcomodar] < arreglo[j])
-                    manejo_arreglos::intercambiarElementos(arreglo, indexPorAcomodar, j);
+                    manejoArreglos::intercambiarElementos(arreglo, indexPorAcomodar, j);
                 else
                     break;
             }
@@ -46,7 +46,7 @@ namespace algoritmos_acomodo
         if (numElementos > 1)
         {
             int* arregloUnido = unirArreglosAcomodados(arreglo, numElementosIzquierda, arregloDerecha, numElementosDerecha);
-            manejo_arreglos::copiarArreglo(arreglo, arregloUnido, numElementos);
+            manejoArreglos::copiarArreglo(arreglo, arregloUnido, numElementos);
         }
 
     }
@@ -73,5 +73,9 @@ namespace algoritmos_acomodo
         for( ; j < numElementosArr2; j++)
             arregloUnido[i+j] = arreglo2[j];
         return arregloUnido;
+    }
+    void quickSort()
+    {
+
     }
 }
