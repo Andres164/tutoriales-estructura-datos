@@ -1,8 +1,9 @@
+#pragma once
 
-class queue
+class Queue
 {
     public:
-        queue();
+        Queue();
 
     protected:
 

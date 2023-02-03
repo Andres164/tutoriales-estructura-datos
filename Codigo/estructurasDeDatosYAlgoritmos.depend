@@ -5,6 +5,58 @@
 
 1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
-1584205420 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1675400706 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
+	"LinkedList.h"
+
+1675363076 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+	<iostream>
+	"algoritmosAcomodo.h"
+	"manejoArreglos.h"
+
+1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
+
+1675393938 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.cpp
+	"Queue.h"
+
+1675393938 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.h
+
+1675395208 source:d:\repositorios\tutoriales-estructura-datos\codigo\src\nodoestructuradatos.cpp
+	"NodoEstructuraDatos.h"
+
+1675398393 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodoestructuradatos.h
+	<memory>
+
+1675400600 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.cpp
+	"LinkedList.h"
+
+1675401034 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
+	"EstructuraDeDatos.h"
+
+1675398496 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\estructuradedatos.cpp
+	"EstructuraDeDatos.h"
+
+1675398018 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\estructuradedatos.h
+	<memory>
+	"NodoEstructuraDatos.h"
+
+1675399865 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.cpp
+	"NodoLinkedList.h"
+
+1675401034 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
+	<memory>
+	"NodoEstructuraDatos.h"
+
+1675398799 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
+	<iostream>
+	<memory>
+	"manejoEstructuraDatos.h"
+	"NodoEstructuraDatos.h"
+
+1675397341 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+	"EstructuraDeDatos.h"
+
+1675399018 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodoestructuradatos.cpp
+	<memory>
+	"NodoEstructuraDatos.h"
 

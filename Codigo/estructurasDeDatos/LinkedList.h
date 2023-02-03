@@ -1,11 +1,11 @@
+#pragma once
+#include "EstructuraDeDatos.h"
 
-class LinkedList
+class LinkedList: public EstructuraDeDatos
 {
     public:
         LinkedList();
-        virtual ~LinkedList();
-
-    protected:
-
+        bool estaVacia();
+        void push_back(int);
     private:
 };
