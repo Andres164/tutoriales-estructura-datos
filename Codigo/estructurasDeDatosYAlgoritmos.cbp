@@ -40,12 +40,8 @@
 		<Unit filename="algoritmosEstructurasDatos/manejoArreglos.h" />
 		<Unit filename="algoritmosEstructurasDatos/manejoEstructuraDatos.cpp" />
 		<Unit filename="algoritmosEstructurasDatos/manejoEstructuraDatos.h" />
-		<Unit filename="estructurasDeDatos/EstructuraDeDatos.cpp" />
-		<Unit filename="estructurasDeDatos/EstructuraDeDatos.h" />
 		<Unit filename="estructurasDeDatos/LinkedList.cpp" />
 		<Unit filename="estructurasDeDatos/LinkedList.h" />
-		<Unit filename="estructurasDeDatos/NodoEstructuraDatos.cpp" />
-		<Unit filename="estructurasDeDatos/NodoEstructuraDatos.h" />
 		<Unit filename="estructurasDeDatos/NodoLinkedList.cpp" />
 		<Unit filename="estructurasDeDatos/NodoLinkedList.h" />
 		<Unit filename="estructurasDeDatos/Queue.cpp" />

@@ -1,7 +1,7 @@
 #pragma once
-#include "EstructuraDeDatos.h"
+#include "LinkedList.h"
 
 namespace manejoEstructuraDatos
 {
-    void imprimirEstructuraDatos(EstructuraDeDatos estructuraDatos);
+    void imprimirLinkedList(LinkedList);
 }

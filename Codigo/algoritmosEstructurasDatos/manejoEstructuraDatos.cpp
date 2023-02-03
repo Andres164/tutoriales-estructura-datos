@@ -1,13 +1,12 @@
 #include <iostream>
 #include <memory>
 #include "manejoEstructuraDatos.h"
-#include "NodoEstructuraDatos.h"
 
 namespace manejoEstructuraDatos
 {
-    void imprimirEstructuraDatos(EstructuraDeDatos estructuraDatos)
+    void imprimirLinkedList(LinkedList lista)
     {
-        std::shared_ptr<NodoEstructuraDatos> nodoActual = estructuraDatos.getRaiz();
+        std::shared_ptr<NodoLinkedList> nodoActual = lista.getRaiz();
         for(int i = 0; nodoActual ; nodoActual = nodoActual->getNodoSucesor())
         {
             std::cout << "Elemento[" << i <<"] = " << nodoActual->getElemento() << std::endl;
