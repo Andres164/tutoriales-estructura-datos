@@ -5,7 +5,7 @@
 
 1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
-1675451680 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1675460612 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	"LinkedList.h"
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
@@ -28,11 +28,11 @@
 1675398393 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodoestructuradatos.h
 	<memory>
 
-1675451651 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.cpp
+1675460638 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.cpp
+	<stdexcept>
 	"LinkedList.h"
-	<iostream>
 
-1675451232 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
+1675460612 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
 	"NodoLinkedList.h"
 
 1675445202 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\estructuradedatos.cpp
@@ -41,11 +41,10 @@
 	<memory>
 	"NodoEstructuraDatos.h"
 
-1675451232 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.cpp
+1675458094 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.cpp
 	"NodoLinkedList.h"
-	<iostream>
 
-1675451232 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
+1675459111 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
 	<memory>
 
 1675447951 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp

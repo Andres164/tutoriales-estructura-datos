@@ -1,8 +1,5 @@
 #include "NodoLinkedList.h"
 
-#include <iostream>
-NodoLinkedList::~NodoLinkedList() { std::cout << "Nodo Destruido" << std::endl; }
-
 NodoLinkedList::NodoLinkedList() : nodoSucesor(nullptr), nodoPredecesor(nullptr) {}
 
 std::shared_ptr<NodoLinkedList>  NodoLinkedList::getNodoPredecesor() { return this->nodoPredecesor; }

@@ -14,9 +14,9 @@ int main()
     myList.push_back(1);
     myList.push_back(10);
     cout << endl;
-    cout << "Eliminando elemento" << endl;
-    myList.eliminarElemento(4);
+    myList.eliminarElemento(2);
     manejoEstructuraDatos::imprimirLinkedList(myList);
+    cout <<  myList.Longitud() << endl;
 
 
 
