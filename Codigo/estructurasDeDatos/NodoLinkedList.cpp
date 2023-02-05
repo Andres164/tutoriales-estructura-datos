@@ -1,6 +1,7 @@
 #include "NodoLinkedList.h"
 
 NodoLinkedList::NodoLinkedList() : nodoSucesor(nullptr), nodoPredecesor(nullptr) {}
+NodoLinkedList::NodoLinkedList(int valorElemento) : elemento(valorElemento), nodoSucesor(nullptr), nodoPredecesor(nullptr) {}
 
 std::shared_ptr<NodoLinkedList>  NodoLinkedList::getNodoPredecesor() { return this->nodoPredecesor; }
 void NodoLinkedList::setNodoPredecesor(std::shared_ptr<NodoLinkedList> predecesor) { this->nodoPredecesor = predecesor; }

@@ -1,61 +1,45 @@
 # depslib dependency file v1.0
-1675363001 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
-	<iostream>
-	"manejoArreglos.h"
-
-1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
-
-1675460612 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
-	<iostream>
-	"LinkedList.h"
-	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
-
-1675363076 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1675535273 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
 	"algoritmosAcomodo.h"
 	"manejoArreglos.h"
 
-1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
+1675535273 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
 
-1675393938 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.cpp
-	"Queue.h"
+1675535273 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
-1675393938 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.h
+1675535273 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
+	<iostream>
+	"manejoArreglos.h"
 
-1675395208 source:d:\repositorios\tutoriales-estructura-datos\codigo\src\nodoestructuradatos.cpp
-	"NodoEstructuraDatos.h"
-
-1675398393 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodoestructuradatos.h
-	<memory>
-
-1675460638 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.cpp
-	<stdexcept>
-	"LinkedList.h"
-
-1675460612 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
-	"NodoLinkedList.h"
-
-1675445202 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\estructuradedatos.cpp
-
-1675445637 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\estructuradedatos.h
-	<memory>
-	"NodoEstructuraDatos.h"
-
-1675458094 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.cpp
-	"NodoLinkedList.h"
-
-1675459111 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
-	<memory>
-
-1675447951 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
+1675535273 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 	<iostream>
 	<memory>
 	"manejoEstructuraDatos.h"
 
-1675447951 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+1675535273 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
 	"LinkedList.h"
 
-1675399018 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodoestructuradatos.cpp
+1675576961 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
+	"NodoLinkedList.h"
+
+1675576346 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\nodolinkedlist.h
 	<memory>
-	"NodoEstructuraDatos.h"
+
+1675576960 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.cpp
+	<stdexcept>
+	"LinkedList.h"
+
+1675576224 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\nodolinkedlist.cpp
+	"NodoLinkedList.h"
+
+1675535273 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\queue.cpp
+	"Queue.h"
+
+1675535273 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\queue.h
+
+1675576974 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+	<iostream>
+	"LinkedList.h"
+	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 

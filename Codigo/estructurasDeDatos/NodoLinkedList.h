@@ -5,7 +5,7 @@ class NodoLinkedList
 {
     public:
         NodoLinkedList();
-
+        NodoLinkedList(int);
         std::shared_ptr<NodoLinkedList> getNodoPredecesor();
         void setNodoPredecesor(std::shared_ptr<NodoLinkedList>);
         std::shared_ptr<NodoLinkedList> getNodoSucesor();

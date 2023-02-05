@@ -10,10 +10,14 @@ class LinkedList
         LinkedList();
         std::shared_ptr<NodoLinkedList> getRaiz();
         bool estaVacia();
+        void insertarElemento(int, int);
+        void push_front(int);
         void push_back(int);
         void pop_front();
+        void pop_back();
         void eliminarElemento(int);
         void eliminarEnIndex(int);
+        void vaciar();
         int Longitud();
 
     private:

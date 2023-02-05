@@ -4,11 +4,37 @@
 using namespace std;
 
 LinkedList::LinkedList() : raiz(nullptr), longitud(0) { }
-shared_ptr<NodoLinkedList> LinkedList::getRaiz() { return this->raiz; }
-int LinkedList::Longitud() { return this->longitud; }
 
+shared_ptr<NodoLinkedList> LinkedList::getRaiz() { return this->raiz; }
 
 bool LinkedList::estaVacia() { return this->longitud > 0 ? false : true; }
+
+void LinkedList::insertarElemento(int index, int valorElemento)
+{
+    shared_ptr<NodoLinkedList> nuevoNodo = make_shared<NodoLinkedList>(NodoLinkedList());
+    nuevoNodo->setElemento(valorElemento);
+    shared_ptr<NodoLinkedList> nodoEnIndex = this->getPtrIndex(index);
+    shared_ptr<NodoLinkedList> predecesor = nodoEnIndex->getNodoPredecesor();
+    if(nodoEnIndex == this->raiz)
+        this->raiz = nuevoNodo;
+    else
+        predecesor->setNodoSucesor(nuevoNodo);
+    nuevoNodo->setNodoSucesor(nodoEnIndex);
+    nuevoNodo->setNodoPredecesor(predecesor);
+    nodoEnIndex->setNodoPredecesor(nuevoNodo);
+    this->longitud++;
+}
+
+void LinkedList::push_front(int valorElemento)
+{
+    if(this->estaVacia())
+    {
+        this->raiz = make_shared<NodoLinkedList>(NodoLinkedList(valorElemento));
+        this->longitud++;
+        return;
+    }
+    this->insertarElemento(0, valorElemento);
+}
 
 void LinkedList::push_back(int valorElemento)
 {
@@ -29,7 +55,16 @@ void LinkedList::push_back(int valorElemento)
 
 void LinkedList::pop_front()
 {
+    if(this->estaVacia())
+        throw std::out_of_range("Intento usar pop_front en una lista vacia");
+    this->eliminarEnIndex(0);
+}
 
+void LinkedList::pop_back()
+{
+    if(this->estaVacia())
+        throw std::out_of_range("Intento usar pop_back en una lista vacia");
+    this->eliminarEnIndex(this->longitud -1);
 }
 
 void LinkedList::eliminarElemento(int elemento)
@@ -45,6 +80,14 @@ void LinkedList::eliminarEnIndex(int index)
     shared_ptr<NodoLinkedList> nodoEliminar = this->getPtrIndex(index);
     this->eliminarNodo(nodoEliminar);
 }
+
+void LinkedList::vaciar()
+{
+    this->raiz = nullptr;
+    this->longitud = 0;
+}
+
+int LinkedList::Longitud() { return this->longitud; }
 
 // Private
 shared_ptr<NodoLinkedList> LinkedList::getPtrElemento(int elemento)
