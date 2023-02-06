@@ -13,4 +13,10 @@ namespace manejoEstructuraDatos
             i++;
         }
     }
+
+    void vaciarStack(std::shared_ptr<Stack> pila)
+    {
+        for(int i = 0; !pila->estaVacia(); i++)
+            std::cout << "Elemento " << i << ": " << pila->pop() << std::endl;
+    }
 }
