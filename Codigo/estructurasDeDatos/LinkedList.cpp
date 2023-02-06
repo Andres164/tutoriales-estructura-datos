@@ -7,6 +7,14 @@ LinkedList::LinkedList() : raiz(nullptr), longitud(0) { }
 
 shared_ptr<NodoLinkedList> LinkedList::getRaiz() { return this->raiz; }
 
+int LinkedList::elementoEnIndex(int index)
+{
+    if(this->estaVacia())
+        throw std::out_of_range("ElementoEnIndex: La lista esta vacia");
+    shared_ptr<NodoLinkedList> nodo = this->getPtrIndex(index);
+    return nodo->getElemento();
+}
+
 bool LinkedList::estaVacia() { return this->longitud > 0 ? false : true; }
 
 void LinkedList::insertarElemento(int index, int valorElemento)

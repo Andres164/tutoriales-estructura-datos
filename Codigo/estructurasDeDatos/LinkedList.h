@@ -9,6 +9,7 @@ class LinkedList
     public:
         LinkedList();
         std::shared_ptr<NodoLinkedList> getRaiz();
+        int elementoEnIndex(int);
         bool estaVacia();
         void insertarElemento(int, int);
         void push_front(int);

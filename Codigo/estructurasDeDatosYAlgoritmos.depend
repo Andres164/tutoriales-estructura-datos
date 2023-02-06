@@ -20,26 +20,32 @@
 1675535273 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
 	"LinkedList.h"
 
-1675576961 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
+1675645523 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
 	"NodoLinkedList.h"
 
 1675576346 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\nodolinkedlist.h
 	<memory>
 
-1675576960 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.cpp
+1675645963 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.cpp
 	<stdexcept>
 	"LinkedList.h"
 
 1675576224 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\nodolinkedlist.cpp
 	"NodoLinkedList.h"
 
-1675535273 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\queue.cpp
+1675645982 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\queue.cpp
+	<memory>
 	"Queue.h"
+	"NodoLinkedList.h"
+	<iostream>
+	"../algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 
-1675535273 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\queue.h
+1675644361 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\queue.h
+	"LinkedList.h"
 
-1675576974 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1675645963 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	"LinkedList.h"
+	"Queue.h"
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 
