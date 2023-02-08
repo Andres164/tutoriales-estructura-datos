@@ -13,9 +13,11 @@ int main()
     pila.push(9);
     pila.push(3);
     pila.push(1);
+    cout << pila.pop() << endl;
     pila.push(-1);
     cout << "L:" << pila.Longitud() << endl;
-    manejoEstructuraDatos::vaciarStack( make_shared<Stack>( pila ) );
+    while(!pila.estaVacia())
+        cout << pila.pop() << endl;
     cout << "L:" << pila.Longitud() << endl;
     /*
     try

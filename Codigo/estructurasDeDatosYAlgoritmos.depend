@@ -58,3 +58,68 @@
 	<memory>
 	"manejoEstructuraDatos.h"
 
+1675363076 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+	<iostream>
+	"algoritmosAcomodo.h"
+	"manejoArreglos.h"
+
+1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
+
+1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
+
+1675363001 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
+	<iostream>
+	"manejoArreglos.h"
+
+1675831525 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
+	<iostream>
+	<memory>
+	"manejoEstructuraDatos.h"
+
+1675831620 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+	<memory>
+	"LinkedList.h"
+	"Stack.h"
+
+1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
+	"NodoLinkedList.h"
+
+1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
+	<memory>
+
+1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.h
+	"LinkedList.h"
+
+1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.cpp
+	<stdexcept>
+	"LinkedList.h"
+
+1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.cpp
+	"NodoLinkedList.h"
+
+1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.cpp
+	<memory>
+	"Queue.h"
+	"NodoLinkedList.h"
+	<iostream>
+	"../algoritmosEstructurasDatos/manejoEstructuraDatos.h"
+
+1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.h
+	"LinkedList.h"
+
+1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
+	"Stack.h"
+
+1675831994 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+	<iostream>
+	<memory>
+	<exception>
+	"LinkedList.h"
+	"Stack.h"
+	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
+
+1675833933 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.cpp
+	"BinaryTree.h"
+
+1675833910 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.h
+

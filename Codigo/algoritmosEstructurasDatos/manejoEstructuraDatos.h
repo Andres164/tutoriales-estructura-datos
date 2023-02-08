@@ -6,5 +6,5 @@
 namespace manejoEstructuraDatos
 {
     void imprimirLinkedList(LinkedList);
-    void vaciarStack(std::shared_ptr<Stack>);
+    void vaciarStack(Stack&);
 }
