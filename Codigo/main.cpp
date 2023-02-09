@@ -11,9 +11,15 @@ using namespace std;
 int main()
 {
     BinarySearchTree bst = BinarySearchTree();
+    bst.agregarElemento(5);
     bst.agregarElemento(2);
     bst.agregarElemento(1);
     bst.agregarElemento(3);
+    bst.agregarElemento(8);
+    bst.agregarElemento(9);
+    bst.imprimirPostOrder();
+    cout << "El elemento 8 existe? " << ( bst.existeElemento(8) ? "Si" : "No" ) << endl;
+    cout << "El elemento existe? " << ( bst.existeElemento(0) ? "Si" : "No" ) << endl;
 
 
     /*

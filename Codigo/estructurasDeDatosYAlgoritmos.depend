@@ -110,7 +110,7 @@
 1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1675924988 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1675963252 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -132,10 +132,11 @@
 1675923292 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodobinarytree.h
 	<memory>
 
-1675925074 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
+1675967429 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
+	<iostream>
 	"BinarySearchTree.h"
 
-1675923292 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.h
+1675967429 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.h
 	<memory>
 	"NodoBinaryTree.h"
 
