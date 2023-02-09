@@ -11,3 +11,7 @@ void NodoBinaryTree::setIzquierdo(shared_ptr<NodoBinaryTree> nuevoNodo) { this->
 shared_ptr<NodoBinaryTree> NodoBinaryTree::getDerecho() { return this->derecho; }
 
 void NodoBinaryTree::setDerecho(shared_ptr<NodoBinaryTree> nuevoNodo) { this->derecho = nuevoNodo; }
+
+int NodoBinaryTree::getData() { return this->data; }
+
+void NodoBinaryTree::setData(int valorData) { this->data = valorData; }

@@ -71,12 +71,12 @@
 	<iostream>
 	"manejoArreglos.h"
 
-1675831525 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
+1675923576 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 	<iostream>
 	<memory>
 	"manejoEstructuraDatos.h"
 
-1675831620 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+1675923535 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
 	<memory>
 	"LinkedList.h"
 	"Stack.h"
@@ -110,16 +110,32 @@
 1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1675831994 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1675924988 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
 	"LinkedList.h"
 	"Stack.h"
+	"BinarySearchTree.h"
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 
-1675833933 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.cpp
+1675921628 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.cpp
 	"BinaryTree.h"
 
-1675833910 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.h
+1675922287 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.h
+	<memory>
+	"NodoBinaryTree.h"
+
+1675923292 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodobinarytree.cpp
+	"NodoBinaryTree.h"
+
+1675923292 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodobinarytree.h
+	<memory>
+
+1675925074 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
+	"BinarySearchTree.h"
+
+1675923292 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.h
+	<memory>
+	"NodoBinaryTree.h"
 

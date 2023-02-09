@@ -3,12 +3,20 @@
 #include <exception>
 #include "LinkedList.h"
 #include "Stack.h"
+#include "BinarySearchTree.h"
 #include "algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 
 using namespace std;
 
 int main()
 {
+    BinarySearchTree bst = BinarySearchTree();
+    bst.agregarElemento(2);
+    bst.agregarElemento(1);
+    bst.agregarElemento(3);
+
+
+    /*
     Stack pila = Stack();
     pila.push(9);
     pila.push(3);
@@ -16,10 +24,9 @@ int main()
     cout << pila.pop() << endl;
     pila.push(-1);
     cout << "L:" << pila.Longitud() << endl;
-    while(!pila.estaVacia())
-        cout << pila.pop() << endl;
+    //manejoEstructuraDatos::vaciarStack(&pila);
     cout << "L:" << pila.Longitud() << endl;
-    /*
+
     try
     {
         pila.top();

@@ -42,6 +42,8 @@
 		<Unit filename="algoritmosEstructurasDatos/manejoArreglos.h" />
 		<Unit filename="algoritmosEstructurasDatos/manejoEstructuraDatos.cpp" />
 		<Unit filename="algoritmosEstructurasDatos/manejoEstructuraDatos.h" />
+		<Unit filename="estructurasDeDatos/BinarySearchTree.cpp" />
+		<Unit filename="estructurasDeDatos/BinarySearchTree.h" />
 		<Unit filename="estructurasDeDatos/BinaryTree.cpp" />
 		<Unit filename="estructurasDeDatos/BinaryTree.h" />
 		<Unit filename="estructurasDeDatos/LinkedList.cpp" />

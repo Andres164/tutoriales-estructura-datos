@@ -11,8 +11,11 @@ class NodoBinaryTree
         void setIzquierdo(shared_ptr<NodoBinaryTree>);
         shared_ptr<NodoBinaryTree> getDerecho();
         void setDerecho(shared_ptr<NodoBinaryTree>);
+        int getData();
+        void setData(int);
 
     protected:
         shared_ptr<NodoBinaryTree> izquierdo;
         shared_ptr<NodoBinaryTree> derecho;
+        int data;
 };

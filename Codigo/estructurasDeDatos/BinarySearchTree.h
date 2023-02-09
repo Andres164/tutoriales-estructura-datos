@@ -2,14 +2,14 @@
 #include <memory>
 #include "NodoBinaryTree.h"
 
-class BinaryTree
+class BinarySearchTree
 {
     public:
-        BinaryTree();
-        void insertar(int, int);
+        BinarySearchTree();
+        void agregarElemento(int);
+        bool estaVacio();
 
     protected:
         std::shared_ptr<NodoBinaryTree> raiz;
-
-        std::shared_ptr<NodoBinaryTree> getPtrElemento(int);
+        int numDeNodos;
 };

@@ -6,5 +6,5 @@
 namespace manejoEstructuraDatos
 {
     void imprimirLinkedList(LinkedList);
-    void vaciarStack(Stack&);
+    void vaciarStack(Stack);
 }

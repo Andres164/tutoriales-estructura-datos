@@ -14,7 +14,7 @@ namespace manejoEstructuraDatos
         }
     }
 
-    void vaciarStack(Stack& pilaAddress)
+    void vaciarStack(Stack pilaAddress)
     {
         std::shared_ptr<Stack> pila = std::make_shared<Stack>(pilaAddress);
         for(int i = 0; !pila->estaVacia(); i++)
