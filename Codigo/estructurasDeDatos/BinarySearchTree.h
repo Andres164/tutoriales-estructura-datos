@@ -27,4 +27,5 @@ class BinarySearchTree
         std::shared_ptr<NodoBinaryTree> getPtrPadreDelElemento(int);
         std::shared_ptr<NodoBinaryTree> getPtrPadreElementoMenor(std::shared_ptr<NodoBinaryTree>);
         void eliminarNodo(std::shared_ptr<NodoBinaryTree>, std::shared_ptr<NodoBinaryTree>);
+        void eliminarRaiz();
 };
