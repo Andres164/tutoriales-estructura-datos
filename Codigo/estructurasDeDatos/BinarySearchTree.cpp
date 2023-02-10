@@ -58,6 +58,20 @@ bool BinarySearchTree::existeElemento(int data)
     return false;
 }
 
+void BinarySearchTree::eliminarElemento(int data)
+{
+    if(data == this->raiz->getData())
+    {
+
+        return;
+    }
+    shared_ptr<NodoBinaryTree> padreElemento = this->getPtrPadreDelElemento(data);
+    if(!padreElemento)
+        return;
+    shared_ptr<NodoBinaryTree> nodoEliminar = data < padreElemento->getData() ? padreElemento->getIzquierdo() : padreElemento->getDerecho();
+    eliminarNodo(nodoEliminar, padreElemento);
+}
+
 void BinarySearchTree::imprimirPreOrder()
 {
     this->imprimirPreOrder(this->raiz);
@@ -71,6 +85,11 @@ void BinarySearchTree::imprimirInOrder()
 void BinarySearchTree::imprimirPostOrder()
 {
     this->imprimirPostOrder(this->raiz);
+}
+
+int BinarySearchTree::getNumNodos()
+{
+    return this->numDeNodos;
 }
 
 bool BinarySearchTree::estaVacio()
@@ -109,4 +128,80 @@ void BinarySearchTree::imprimirPostOrder(shared_ptr<NodoBinaryTree> nodoActual)
 void BinarySearchTree::imprimirLevelOrder(shared_ptr<NodoBinaryTree>)
 {
 
+}
+
+
+// PRIVATE
+shared_ptr<NodoBinaryTree> BinarySearchTree::getPtrPadreDelElemento(int data)
+{
+    shared_ptr<NodoBinaryTree> nodoPadre = this->raiz;
+    while(nodoPadre)
+    {
+        if(data < nodoPadre->getData())
+        {
+            shared_ptr<NodoBinaryTree> nodoIzquierdo = nodoPadre->getIzquierdo();
+            if(nodoIzquierdo && data == nodoIzquierdo->getData())
+                return nodoPadre;
+            nodoPadre = nodoIzquierdo;
+        }
+        else
+        {
+            shared_ptr<NodoBinaryTree> nodoDerecho = nodoPadre->getDerecho();
+            if(nodoDerecho && data == nodoDerecho->getData())
+                return nodoPadre;
+            nodoPadre = nodoDerecho;
+        }
+    }
+    return nullptr;
+}
+
+shared_ptr<NodoBinaryTree> BinarySearchTree::getPtrPadreElementoMenor(shared_ptr<NodoBinaryTree> raiz)
+{
+    shared_ptr<NodoBinaryTree> padreElementoMenor = raiz;
+    shared_ptr<NodoBinaryTree> nodoIzquierdo = raiz->getIzquierdo();
+    if(!nodoIzquierdo)
+        return nullptr;
+    while(nodoIzquierdo->getIzquierdo())
+    {
+        padreElementoMenor = padreElementoMenor->getIzquierdo();
+        nodoIzquierdo = padreElementoMenor->getIzquierdo();
+    }
+    return padreElementoMenor;
+}
+
+void BinarySearchTree::eliminarNodo(shared_ptr<NodoBinaryTree> nodoEliminar, shared_ptr<NodoBinaryTree> nodoPadre)
+{
+    if(!nodoEliminar->getIzquierdo() && !nodoEliminar->getDerecho())
+    {
+        if(nodoPadre->getIzquierdo() == nodoEliminar)
+            nodoPadre->setIzquierdo(nullptr);
+        else
+            nodoPadre->setDerecho(nullptr);
+        this->numDeNodos--;
+        return;
+    }
+    else if(nodoEliminar->getIzquierdo() && nodoEliminar->getDerecho())
+    {
+        shared_ptr<NodoBinaryTree> padreElementoReemplazo = getPtrPadreElementoMenor(nodoEliminar->getDerecho()) ;
+        if(padreElementoReemplazo)
+        {
+            int dataElementoReemplazo = padreElementoReemplazo->getIzquierdo()->getData();
+            nodoEliminar->setData(dataElementoReemplazo);
+            padreElementoReemplazo->setIzquierdo(nullptr);
+        }
+        else
+        {
+            int dataElementoReemplazo = nodoEliminar->getDerecho()->getData();
+            nodoEliminar->setData(dataElementoReemplazo);
+            nodoEliminar->setDerecho(nullptr);
+        }
+        this->numDeNodos--;
+        return;
+    }
+    shared_ptr<NodoBinaryTree> nodoHijo = nodoEliminar->getIzquierdo() ? nodoEliminar->getIzquierdo() : nodoEliminar->getDerecho();
+    if(nodoPadre->getIzquierdo() == nodoEliminar)
+        nodoPadre->setIzquierdo(nodoHijo);
+    else
+        nodoPadre->setDerecho(nodoHijo);
+    this->numDeNodos--;
 }
