@@ -19,7 +19,6 @@ class BinarySearchTree
         void imprimirInOrder(std::shared_ptr<NodoBinaryTree>);
         void imprimirPreOrder(std::shared_ptr<NodoBinaryTree>);
         void imprimirPostOrder(std::shared_ptr<NodoBinaryTree>);
-        void imprimirLevelOrder(std::shared_ptr<NodoBinaryTree>);
     protected:
         std::shared_ptr<NodoBinaryTree> raiz;
         int numDeNodos;

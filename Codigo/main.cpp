@@ -17,12 +17,11 @@ int main()
     bst.agregarElemento(3);
     bst.agregarElemento(8);
     bst.agregarElemento(9);
-    //bst.agregarElemento(2);
     bst.agregarElemento(4);
     bst.agregarElemento(6);
     bst.agregarElemento(7);
     bst.eliminarElemento(5);
-    bst.imprimirPreOrder();
+    bst.imprimirLevelOrder();
     cout << "El elemento 8 existe? " << ( bst.existeElemento(8) ? "Si" : "No" ) << endl;
     cout << "El elemento existe? " << ( bst.existeElemento(0) ? "Si" : "No" ) << endl;
     cout << "Numero de nodos: " << bst.getNumNodos() << endl;

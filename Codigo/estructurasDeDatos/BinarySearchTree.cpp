@@ -88,6 +88,24 @@ void BinarySearchTree::imprimirPostOrder()
     this->imprimirPostOrder(this->raiz);
 }
 
+void BinarySearchTree::imprimirLevelOrder()
+{
+    if(estaVacio())
+        return;
+    queue<shared_ptr<NodoBinaryTree>> que;
+    que.push(this->raiz);
+    while(!que.empty())
+    {
+        shared_ptr<NodoBinaryTree> nodoActual = que.front();
+        cout << nodoActual->getData() << endl;
+        que.pop();
+        if(nodoActual->getIzquierdo())
+            que.push(nodoActual->getIzquierdo());
+        if(nodoActual->getDerecho())
+            que.push(nodoActual->getDerecho());
+    }
+}
+
 int BinarySearchTree::getNumNodos()
 {
     return this->numDeNodos;
@@ -126,10 +144,6 @@ void BinarySearchTree::imprimirPostOrder(shared_ptr<NodoBinaryTree> nodoActual)
     cout << nodoActual->getData() << endl;
 }
 
-void BinarySearchTree::imprimirLevelOrder(shared_ptr<NodoBinaryTree>)
-{
-
-}
 
 
 // PRIVATE
