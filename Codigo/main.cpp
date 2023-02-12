@@ -20,8 +20,7 @@ int main()
     bst.agregarElemento(4);
     bst.agregarElemento(6);
     bst.agregarElemento(7);
-    bst.eliminarElemento(5);
-    bst.imprimirLevelOrder();
+    cout << "altura del arbol: " << bst.altura() << endl;
     cout << "El elemento 8 existe? " << ( bst.existeElemento(8) ? "Si" : "No" ) << endl;
     cout << "El elemento existe? " << ( bst.existeElemento(0) ? "Si" : "No" ) << endl;
     cout << "Numero de nodos: " << bst.getNumNodos() << endl;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <algorithm>
 #include "BinarySearchTree.h"
 
 using namespace std;
@@ -88,6 +89,11 @@ void BinarySearchTree::imprimirPostOrder()
     this->imprimirPostOrder(this->raiz);
 }
 
+int BinarySearchTree::altura()
+{
+    return this->altura(this->raiz);
+}
+
 void BinarySearchTree::imprimirLevelOrder()
 {
     if(estaVacio())
@@ -142,6 +148,15 @@ void BinarySearchTree::imprimirPostOrder(shared_ptr<NodoBinaryTree> nodoActual)
     imprimirInOrder(nodoActual->getIzquierdo());
     imprimirInOrder(nodoActual->getDerecho());
     cout << nodoActual->getData() << endl;
+}
+
+int BinarySearchTree::altura(shared_ptr<NodoBinaryTree> raiz)
+{
+    if(!raiz->getIzquierdo() && !raiz->getDerecho())
+        return 0;
+    int alturaIzquierdo = raiz->getIzquierdo() ? altura(raiz->getIzquierdo()) : 0;
+    int alturaDerecho = raiz->getDerecho() ? altura(raiz->getDerecho()) : 0;
+    return max( alturaIzquierdo, alturaDerecho ) +1;
 }
 
 
