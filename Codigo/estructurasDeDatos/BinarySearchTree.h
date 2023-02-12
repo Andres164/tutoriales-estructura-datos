@@ -17,13 +17,15 @@ class BinarySearchTree
         void imprimirPreOrder();
         void imprimirPostOrder();
         void imprimirLevelOrder();
-        int getNumNodos();
+        bool estaBalanceado();
         int altura();
+        int getNumNodos();
         bool estaVacio();
 
         void imprimirInOrder(std::shared_ptr<NodoBinaryTree>);
         void imprimirPreOrder(std::shared_ptr<NodoBinaryTree>);
         void imprimirPostOrder(std::shared_ptr<NodoBinaryTree>);
+        bool estaBalanceado(std::shared_ptr<NodoBinaryTree>, int&);
         int altura(std::shared_ptr<NodoBinaryTree>);
 
     protected:
@@ -31,5 +33,4 @@ class BinarySearchTree
         std::shared_ptr<NodoBinaryTree> getPtrPadreElementoMenor(std::shared_ptr<NodoBinaryTree>);
         void eliminarNodo(std::shared_ptr<NodoBinaryTree>, std::shared_ptr<NodoBinaryTree>);
         void eliminarRaiz();
-        bool estaBalanceado();
 };

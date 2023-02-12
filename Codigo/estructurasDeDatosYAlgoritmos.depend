@@ -156,11 +156,11 @@
 1676082518 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\nodobinarytree.cpp
 	"NodoBinaryTree.h"
 
-1676181210 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\binarysearchtree.h
+1676225001 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\binarysearchtree.h
 	<memory>
 	"NodoBinaryTree.h"
 
-1676181366 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\binarysearchtree.cpp
+1676225495 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\binarysearchtree.cpp
 	<iostream>
 	<queue>
 	<algorithm>

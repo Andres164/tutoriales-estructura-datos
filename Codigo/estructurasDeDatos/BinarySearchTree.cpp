@@ -89,11 +89,6 @@ void BinarySearchTree::imprimirPostOrder()
     this->imprimirPostOrder(this->raiz);
 }
 
-int BinarySearchTree::altura()
-{
-    return this->altura(this->raiz);
-}
-
 void BinarySearchTree::imprimirLevelOrder()
 {
     if(estaVacio())
@@ -110,6 +105,17 @@ void BinarySearchTree::imprimirLevelOrder()
         if(nodoActual->getDerecho())
             que.push(nodoActual->getDerecho());
     }
+}
+
+bool BinarySearchTree::estaBalanceado()
+{
+    int altura = 0;
+    return this->estaBalanceado(this->raiz, altura);
+}
+
+int BinarySearchTree::altura()
+{
+    return this->altura(this->raiz);
 }
 
 int BinarySearchTree::getNumNodos()
@@ -148,6 +154,23 @@ void BinarySearchTree::imprimirPostOrder(shared_ptr<NodoBinaryTree> nodoActual)
     imprimirInOrder(nodoActual->getIzquierdo());
     imprimirInOrder(nodoActual->getDerecho());
     cout << nodoActual->getData() << endl;
+}
+
+bool BinarySearchTree::estaBalanceado(shared_ptr<NodoBinaryTree> raiz, int &altura)
+{
+    int alturaIzquierdo = 0, alturaDerecho = 0;
+    if(!raiz->getIzquierdo() && !raiz->getDerecho())
+    {
+        altura = 1;
+        return true;
+    }
+    bool izquierdoEstaBalanceado = raiz->getIzquierdo() ? estaBalanceado(raiz->getIzquierdo(), alturaIzquierdo) : true;
+    bool derechoEstaBalanceado = raiz->getDerecho() ? estaBalanceado(raiz->getDerecho(), alturaDerecho) : true;
+    if(!izquierdoEstaBalanceado || !derechoEstaBalanceado)
+        return false;
+    unsigned int diferenciaAlturas = alturaIzquierdo > alturaDerecho ? alturaIzquierdo - alturaDerecho : alturaDerecho - alturaIzquierdo;
+    altura = max(alturaIzquierdo, alturaDerecho) +1;
+    return diferenciaAlturas > 1 ? false : true;
 }
 
 int BinarySearchTree::altura(shared_ptr<NodoBinaryTree> raiz)
