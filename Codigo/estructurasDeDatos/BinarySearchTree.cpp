@@ -1,6 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <algorithm>
+#include <cmath>
 #include "BinarySearchTree.h"
 
 using namespace std;
@@ -113,6 +114,17 @@ bool BinarySearchTree::estaBalanceado()
     return this->estaBalanceado(this->raiz, altura);
 }
 
+bool BinarySearchTree::estaLleno()
+{
+    return this->estaLleno(this->raiz);
+}
+
+bool BinarySearchTree::esPerfecto()
+{
+    int nodosQueDebeTener = pow( 2, this->altura() +1 ) -1;
+    return this->numDeNodos == nodosQueDebeTener ? true : false;
+}
+
 int BinarySearchTree::altura()
 {
     return this->altura(this->raiz);
@@ -171,6 +183,15 @@ bool BinarySearchTree::estaBalanceado(shared_ptr<NodoBinaryTree> raiz, int &altu
     unsigned int diferenciaAlturas = alturaIzquierdo > alturaDerecho ? alturaIzquierdo - alturaDerecho : alturaDerecho - alturaIzquierdo;
     altura = max(alturaIzquierdo, alturaDerecho) +1;
     return diferenciaAlturas > 1 ? false : true;
+}
+
+bool BinarySearchTree::estaLleno(shared_ptr<NodoBinaryTree> raiz)
+{
+    if(!raiz->getIzquierdo() != !raiz->getDerecho())
+        return false;
+    bool izquierdoEsCompleto = raiz->getIzquierdo() ? estaLleno(raiz->getIzquierdo()) : true;
+    bool derechoEsCompleto = raiz->getDerecho() ? estaLleno(raiz->getDerecho()) : true;
+    return izquierdoEsCompleto && derechoEsCompleto;
 }
 
 int BinarySearchTree::altura(shared_ptr<NodoBinaryTree> raiz)

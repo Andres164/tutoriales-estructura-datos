@@ -21,6 +21,8 @@ int main()
     bst.agregarElemento(6);
     bst.agregarElemento(7);
     cout << "El arbol esta balanceado? " << (bst.estaBalanceado() ? "Si" : "No") << endl;
+    cout << "El arbol es perfecto? " << (bst.esPerfecto() ? "Si" : "No") << endl;
+    cout << "El arbol esta lleno? " << (bst.estaLleno() ? "Si" : "No") << endl;
     cout << "altura del arbol: " << bst.altura() << endl;
     cout << "El elemento 8 existe? " << ( bst.existeElemento(8) ? "Si" : "No" ) << endl;
     cout << "El elemento 0 existe? " << ( bst.existeElemento(0) ? "Si" : "No" ) << endl;

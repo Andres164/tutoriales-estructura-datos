@@ -18,6 +18,8 @@ class BinarySearchTree
         void imprimirPostOrder();
         void imprimirLevelOrder();
         bool estaBalanceado();
+        bool estaLleno();
+        bool esPerfecto();
         int altura();
         int getNumNodos();
         bool estaVacio();
@@ -26,6 +28,7 @@ class BinarySearchTree
         void imprimirPreOrder(std::shared_ptr<NodoBinaryTree>);
         void imprimirPostOrder(std::shared_ptr<NodoBinaryTree>);
         bool estaBalanceado(std::shared_ptr<NodoBinaryTree>, int&);
+        bool estaLleno(std::shared_ptr<NodoBinaryTree>);
         int altura(std::shared_ptr<NodoBinaryTree>);
 
     protected:
