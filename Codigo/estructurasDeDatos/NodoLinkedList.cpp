@@ -1,7 +1,6 @@
 #include "NodoLinkedList.h"
-
 template <typename T>
-NodoLinkedList::NodoLinkedList() : nodoSucesor(nullptr), nodoPredecesor(nullptr) {}
+NodoLinkedList<T>::NodoLinkedList() : nodoSucesor(nullptr), nodoPredecesor(nullptr) {}
 NodoLinkedList::NodoLinkedList(T valorElemento) : elemento(valorElemento), nodoSucesor(nullptr), nodoPredecesor(nullptr) {}
 
 std::shared_ptr< NodoLinkedList<T> >  NodoLinkedList::getNodoPredecesor() { return this->nodoPredecesor; }
