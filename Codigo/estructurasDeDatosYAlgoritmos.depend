@@ -83,10 +83,10 @@
 	"LinkedList.h"
 	"Stack.h"
 
-1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
+1676350961 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
 	"NodoLinkedList.h"
 
-1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
+1676351128 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
 	<memory>
 
 1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.h
@@ -134,12 +134,14 @@
 1675923292 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodobinarytree.h
 	<memory>
 
-1676054221 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
+1676345322 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
 	<iostream>
 	<queue>
+	<algorithm>
+	<cmath>
 	"BinarySearchTree.h"
 
-1676053072 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.h
+1676345322 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.h
 	<memory>
 	"NodoBinaryTree.h"
 

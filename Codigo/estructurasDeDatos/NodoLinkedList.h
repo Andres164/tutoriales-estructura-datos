@@ -1,21 +1,21 @@
 #pragma once
 #include <memory>
 
-class NodoLinkedList
+template <typename T> class NodoLinkedList
 {
     public:
         NodoLinkedList();
-        NodoLinkedList(int);
-        std::shared_ptr<NodoLinkedList> getNodoPredecesor();
-        void setNodoPredecesor(std::shared_ptr<NodoLinkedList>);
-        std::shared_ptr<NodoLinkedList> getNodoSucesor();
-        void setNodoSucesor(std::shared_ptr<NodoLinkedList>);
-        int getElemento();
-        void setElemento(int);
+        NodoLinkedList(T);
+        std::shared_ptr< NodoLinkedList<T> > getNodoPredecesor();
+        void setNodoPredecesor(std::shared_ptr< NodoLinkedList<T> >);
+        std::shared_ptr< NodoLinkedList<T> > getNodoSucesor();
+        void setNodoSucesor(std::shared_ptr< NodoLinkedList<T> >);
+        T getElemento();
+        void setElemento(T);
 
     protected:
-        int elemento;
-        std::shared_ptr<NodoLinkedList> nodoSucesor;
-        std::shared_ptr<NodoLinkedList> nodoPredecesor;
+        T elemento;
+        std::shared_ptr< NodoLinkedList<T> > nodoSucesor;
+        std::shared_ptr< NodoLinkedList<T> > nodoPredecesor;
 
 };

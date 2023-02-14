@@ -1,28 +1,28 @@
 #pragma once
 #include "NodoLinkedList.h"
 
-class LinkedList
+template <typename T> class LinkedList
 {
     private:
-        std::shared_ptr<NodoLinkedList> raiz;
+        std::shared_ptr< NodoLinkedList<T> > raiz;
         int longitud;
     public:
         LinkedList();
-        std::shared_ptr<NodoLinkedList> getRaiz();
-        int elementoEnIndex(int);
+        std::shared_ptr< NodoLinkedList<T> > getRaiz();
+        T elementoEnIndex(int);
         bool estaVacia();
-        void insertarElemento(int, int);
-        void push_front(int);
-        void push_back(int);
+        void insertarElemento(int, T);
+        void push_front(T);
+        void push_back(T);
         void pop_front();
         void pop_back();
-        void eliminarElemento(int);
+        void eliminarElemento(T);
         void eliminarEnIndex(int);
         void vaciar();
         int Longitud();
 
     private:
-        std::shared_ptr<NodoLinkedList> getPtrElemento(int);
-        std::shared_ptr<NodoLinkedList> getPtrIndex(int);
-        void eliminarNodo(std::shared_ptr<NodoLinkedList>);
+        std::shared_ptr< NodoLinkedList<T> > getPtrElemento(T);
+        std::shared_ptr< NodoLinkedList<T> > getPtrIndex(int);
+        void eliminarNodo(std::shared_ptr< NodoLinkedList<T> >);
 };

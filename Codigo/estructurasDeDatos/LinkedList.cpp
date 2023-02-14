@@ -2,27 +2,27 @@
 #include "LinkedList.h"
 
 using namespace std;
-
+template <typename T>
 LinkedList::LinkedList() : raiz(nullptr), longitud(0) { }
 
-shared_ptr<NodoLinkedList> LinkedList::getRaiz() { return this->raiz; }
+shared_ptr< NodoLinkedList<T> > LinkedList::getRaiz() { return this->raiz; }
 
-int LinkedList::elementoEnIndex(int index)
+T LinkedList::elementoEnIndex(int index)
 {
     if(this->estaVacia())
         throw std::out_of_range("ElementoEnIndex: La lista esta vacia");
-    shared_ptr<NodoLinkedList> nodo = this->getPtrIndex(index);
+    shared_ptr< NodoLinkedList<T> > nodo = this->getPtrIndex(index);
     return nodo->getElemento();
 }
 
 bool LinkedList::estaVacia() { return this->longitud > 0 ? false : true; }
 
-void LinkedList::insertarElemento(int index, int valorElemento)
+void LinkedList::insertarElemento(int index, T valorElemento)
 {
-    shared_ptr<NodoLinkedList> nuevoNodo = make_shared<NodoLinkedList>(NodoLinkedList());
+    shared_ptr< NodoLinkedList<T> > nuevoNodo = make_shared< NodoLinkedList<T> >( NodoLinkedList<T> ());
     nuevoNodo->setElemento(valorElemento);
-    shared_ptr<NodoLinkedList> nodoEnIndex = this->getPtrIndex(index);
-    shared_ptr<NodoLinkedList> predecesor = nodoEnIndex->getNodoPredecesor();
+    shared_ptr< NodoLinkedList<T> > nodoEnIndex = this->getPtrIndex(index);
+    shared_ptr< NodoLinkedList<T> > predecesor = nodoEnIndex->getNodoPredecesor();
     if(nodoEnIndex == this->raiz)
         this->raiz = nuevoNodo;
     else
@@ -33,20 +33,20 @@ void LinkedList::insertarElemento(int index, int valorElemento)
     this->longitud++;
 }
 
-void LinkedList::push_front(int valorElemento)
+void LinkedList::push_front(T valorElemento)
 {
     if(this->estaVacia())
     {
-        this->raiz = make_shared<NodoLinkedList>(NodoLinkedList(valorElemento));
+        this->raiz = make_shared< NodoLinkedList<T> >( NodoLinkedList<T> (valorElemento));
         this->longitud++;
         return;
     }
     this->insertarElemento(0, valorElemento);
 }
 
-void LinkedList::push_back(int valorElemento)
+void LinkedList::push_back(T valorElemento)
 {
-    shared_ptr<NodoLinkedList> nuevoNodo = make_shared<NodoLinkedList>(NodoLinkedList());
+    shared_ptr< NodoLinkedList<T> > nuevoNodo = make_shared< NodoLinkedList<T> >( NodoLinkedList<T> ());
     nuevoNodo->setElemento(valorElemento);
     if(this->estaVacia())
     {
@@ -54,7 +54,7 @@ void LinkedList::push_back(int valorElemento)
         this->longitud++;
         return;
     }
-    shared_ptr<NodoLinkedList> nodoActual;
+    shared_ptr< NodoLinkedList<T> > nodoActual;
     for(nodoActual = this->raiz; nodoActual->getNodoSucesor(); nodoActual = nodoActual->getNodoSucesor() ) {}
     nuevoNodo->setNodoPredecesor(nodoActual);
     nodoActual->setNodoSucesor(nuevoNodo);
@@ -75,9 +75,9 @@ void LinkedList::pop_back()
     this->eliminarEnIndex(this->longitud -1);
 }
 
-void LinkedList::eliminarElemento(int elemento)
+void LinkedList::eliminarElemento(T elemento)
 {
-    shared_ptr<NodoLinkedList> nodoEliminar = this->getPtrElemento(elemento);
+    shared_ptr< NodoLinkedList<T> > nodoEliminar = this->getPtrElemento(elemento);
     if(!nodoEliminar)
         return;
     this->eliminarNodo(nodoEliminar);
@@ -85,7 +85,7 @@ void LinkedList::eliminarElemento(int elemento)
 
 void LinkedList::eliminarEnIndex(int index)
 {
-    shared_ptr<NodoLinkedList> nodoEliminar = this->getPtrIndex(index);
+    shared_ptr< NodoLinkedList<T> > nodoEliminar = this->getPtrIndex(index);
     this->eliminarNodo(nodoEliminar);
 }
 
@@ -98,29 +98,29 @@ void LinkedList::vaciar()
 int LinkedList::Longitud() { return this->longitud; }
 
 // Private
-shared_ptr<NodoLinkedList> LinkedList::getPtrElemento(int elemento)
+shared_ptr< NodoLinkedList<T> > LinkedList::getPtrElemento(T elemento)
 {
-    shared_ptr<NodoLinkedList> nodoActual = this->raiz;
+    shared_ptr< NodoLinkedList<T> > nodoActual = this->raiz;
     while(nodoActual && nodoActual->getElemento() != elemento)
         nodoActual = nodoActual->getNodoSucesor();
     return nodoActual ? nodoActual : nullptr;
 }
 
-shared_ptr<NodoLinkedList> LinkedList::getPtrIndex(int index)
+shared_ptr< NodoLinkedList<T> > LinkedList::getPtrIndex(int index)
 {
     if(index < 0 || index >= this->longitud)
         throw std::out_of_range("El Index esta fuera del rango de la lista");
-    shared_ptr<NodoLinkedList> nodoActual = this->raiz;
+    shared_ptr< NodoLinkedList<T> > nodoActual = this->raiz;
     for(int i = 1; i <= index; i++)
         nodoActual = nodoActual->getNodoSucesor();
     return nodoActual;
 }
 
-void LinkedList::eliminarNodo(shared_ptr<NodoLinkedList> nodoEliminar)
+void LinkedList::eliminarNodo(shared_ptr< NodoLinkedList<T> > nodoEliminar)
 {
     if(nodoEliminar != this->raiz)
     {
-        shared_ptr<NodoLinkedList> predecesor = nodoEliminar->getNodoPredecesor();
+        shared_ptr< NodoLinkedList<T> > predecesor = nodoEliminar->getNodoPredecesor();
         predecesor->setNodoSucesor(nodoEliminar->getNodoSucesor());
     }
     else
