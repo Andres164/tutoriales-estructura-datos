@@ -78,41 +78,33 @@
 	<memory>
 	"manejoEstructuraDatos.h"
 
-1675923535 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+1676435577 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
 	<memory>
 	"LinkedList.h"
 	"Stack.h"
 
-1676353143 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
-	"NodoLinkedList.h"
-
-1676351128 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
-	<memory>
-
-1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.h
-	"LinkedList.h"
-
-1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.cpp
+1676435031 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
 	<stdexcept>
+	"NodoLinkedList.h"
+
+1676434433 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
+	<memory>
+
+1676435510 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.h
 	"LinkedList.h"
 
-1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.cpp
-	"NodoLinkedList.h"
+1676353434 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.cpp
 
-1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.cpp
-	<memory>
-	"Queue.h"
-	"NodoLinkedList.h"
-	<iostream>
-	"../algoritmosEstructurasDatos/manejoEstructuraDatos.h"
+1676433376 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.cpp
+
+1676435031 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.cpp
 
 1675830598 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\queue.h
 	"LinkedList.h"
 
-1675830598 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
-	"Stack.h"
+1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1676054566 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1676345322 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>

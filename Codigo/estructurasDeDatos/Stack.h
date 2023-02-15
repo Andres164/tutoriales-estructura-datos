@@ -1,16 +1,40 @@
 #pragma once
 #include "LinkedList.h"
 
+template <typename T>
 class Stack
 {
     public:
-        Stack();
-        void push(int);
-        int pop();
-        bool estaVacia();
-        int Longitud();
-        int top();
+        Stack() : contenedor(LinkedList<T>())
+        { }
+
+        void push(T valorElemento)
+        {
+            this->contenedor.push_back(valorElemento);
+        }
+
+        T pop()
+        {
+            T elemento = this->contenedor.elementoEnIndex(this->Longitud() -1);
+            this->contenedor.pop_back();
+            return elemento;
+        }
+
+        bool estaVacia()
+        {
+            return this->contenedor.estaVacia();
+        }
+
+        int Longitud()
+        {
+            return this->contenedor.Longitud();
+        }
+
+        T top()
+        {
+            return this->contenedor.elementoEnIndex(this->Longitud() -1);
+        }
 
     private:
-        LinkedList contenedor;
+        LinkedList<T> contenedor;
 };

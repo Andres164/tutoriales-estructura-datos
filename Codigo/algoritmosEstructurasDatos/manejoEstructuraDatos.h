@@ -5,6 +5,9 @@
 
 namespace manejoEstructuraDatos
 {
-    void imprimirLinkedList(LinkedList);
-    void vaciarStack(Stack);
+    template <typename T>
+    void imprimirLinkedList(LinkedList<T>);
+
+    template <typename T>
+    void vaciarStack(Stack<T>);
 }
