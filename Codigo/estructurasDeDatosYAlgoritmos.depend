@@ -73,12 +73,10 @@
 	<iostream>
 	"manejoArreglos.h"
 
-1675923576 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
-	<iostream>
-	<memory>
-	"manejoEstructuraDatos.h"
+1676438245 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
-1676435577 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+1676438267 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+	<iostream>
 	<memory>
 	"LinkedList.h"
 	"Stack.h"
@@ -104,7 +102,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1676345322 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1676438129 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>

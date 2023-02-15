@@ -10,6 +10,7 @@ using namespace std;
 
 int main()
 {
+    /*
     BinarySearchTree bst = BinarySearchTree();
     bst.agregarElemento(5);
     bst.agregarElemento(1);
@@ -27,23 +28,25 @@ int main()
     cout << "El elemento 8 existe? " << ( bst.existeElemento(8) ? "Si" : "No" ) << endl;
     cout << "El elemento 0 existe? " << ( bst.existeElemento(0) ? "Si" : "No" ) << endl;
     cout << "Numero de nodos: " << bst.getNumNodos() << endl;
+    */
 
 
-    /*
-    Stack pila = Stack();
+    Stack<int> pila = Stack<int>();
     pila.push(9);
     pila.push(3);
     pila.push(1);
     cout << pila.pop() << endl;
     pila.push(-1);
     cout << "L:" << pila.Longitud() << endl;
+    for(int i = 0; !pila.estaVacia(); i++)
+            cout << "Elemento " << i << ": " << pila.pop() << endl;
     //manejoEstructuraDatos::vaciarStack(&pila);
     cout << "L:" << pila.Longitud() << endl;
 
     try
     {
         pila.top();
-    } catch(out_of_range const& ex) { cout << ex.what() << endl; }*/
+    } catch(out_of_range const& ex) { cout << ex.what() << endl; }
 
     return 0;
 }
