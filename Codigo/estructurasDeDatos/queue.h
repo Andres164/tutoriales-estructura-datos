@@ -6,7 +6,7 @@ template <typename T>
 class Queue
 {
     public:
-        Queue() : contenedor(LinkedList())
+        Queue() : contenedor(LinkedList<T>())
         {}
 
         void push(T valorElemento)
@@ -39,17 +39,6 @@ class Queue
         T ultimoElemento()
         {
             return this->contenedor.elementoEnIndex(this->Longitud()-1);
-        }
-
-        // FOR DEBUGGING
-        #include <iostream>
-        #include "../algoritmosEstructurasDatos/manejoEstructuraDatos.h"
-        void imprimirElementos()
-        {
-            if(!this->estaVacia())
-                manejoEstructuraDatos::imprimirLinkedList(this->contenedor);
-            else
-                std::cout << "Queue vacia" << std::endl;
         }
 
     private:

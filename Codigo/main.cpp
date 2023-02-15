@@ -2,6 +2,7 @@
 #include <memory>
 #include <exception>
 #include "LinkedList.h"
+#include "Queue.h"
 #include "Stack.h"
 #include "BinarySearchTree.h"
 #include "algoritmosEstructurasDatos/manejoEstructuraDatos.h"
@@ -30,23 +31,17 @@ int main()
     cout << "Numero de nodos: " << bst.getNumNodos() << endl;
     */
 
+    Queue<string> myQueue = Queue<string>();
+    myQueue.push("Jose");
+    myQueue.push("Manuel");
+    myQueue.push("Chuy");
+    myQueue.push("Crhis");
 
-    Stack<int> pila = Stack<int>();
-    pila.push(9);
-    pila.push(3);
-    pila.push(1);
-    cout << pila.pop() << endl;
-    pila.push(-1);
-    cout << "L:" << pila.Longitud() << endl;
-    for(int i = 0; !pila.estaVacia(); i++)
-            cout << "Elemento " << i << ": " << pila.pop() << endl;
-    //manejoEstructuraDatos::vaciarStack(&pila);
-    cout << "L:" << pila.Longitud() << endl;
-
-    try
-    {
-        pila.top();
-    } catch(out_of_range const& ex) { cout << ex.what() << endl; }
+    cout << "Elementos en cola: " << myQueue.Longitud() << endl;
+    cout << "Primer elemento en la cola: " << myQueue.primerElemento() << endl;
+    cout << "Ultimo elemento en la cola: " << myQueue.ultimoElemento() << endl;
+    manejoEstructuraDatos::vaciarQueue(myQueue);
+    cout << endl << "Elementos en cola: " << myQueue.Longitud() << endl;
 
     return 0;
 }

@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="estructurasDeDatos" />
 					<Add directory="estructurasDeDatos/" />
+					<Add directory="unitTesting" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -26,6 +27,7 @@
 					<Add option="-O2" />
 					<Add directory="estructurasDeDatos" />
 					<Add directory="estructurasDeDatos/" />
+					<Add directory="unitTesting" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -46,17 +48,15 @@
 		<Unit filename="estructurasDeDatos/BinarySearchTree.h" />
 		<Unit filename="estructurasDeDatos/BinaryTree.cpp" />
 		<Unit filename="estructurasDeDatos/BinaryTree.h" />
-		<Unit filename="estructurasDeDatos/LinkedList.cpp" />
 		<Unit filename="estructurasDeDatos/LinkedList.h" />
 		<Unit filename="estructurasDeDatos/NodoBinaryTree.cpp" />
 		<Unit filename="estructurasDeDatos/NodoBinaryTree.h" />
-		<Unit filename="estructurasDeDatos/NodoLinkedList.cpp" />
 		<Unit filename="estructurasDeDatos/NodoLinkedList.h" />
-		<Unit filename="estructurasDeDatos/Stack.cpp" />
+		<Unit filename="estructurasDeDatos/Queue.h" />
 		<Unit filename="estructurasDeDatos/Stack.h" />
-		<Unit filename="estructurasDeDatos/queue.cpp" />
-		<Unit filename="estructurasDeDatos/queue.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="unitTesting/QueueTest.cpp" />
+		<Unit filename="unitTesting/QueueTest.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
