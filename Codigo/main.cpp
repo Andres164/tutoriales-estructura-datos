@@ -6,11 +6,14 @@
 #include "Stack.h"
 #include "BinarySearchTree.h"
 #include "algoritmosEstructurasDatos/manejoEstructuraDatos.h"
+#include "QueueTest.h"
 
 using namespace std;
 
 int main()
 {
+    QueueTest::test_Push();
+
     /*
     BinarySearchTree bst = BinarySearchTree();
     bst.agregarElemento(5);
@@ -30,7 +33,7 @@ int main()
     cout << "El elemento 0 existe? " << ( bst.existeElemento(0) ? "Si" : "No" ) << endl;
     cout << "Numero de nodos: " << bst.getNumNodos() << endl;
     */
-
+    /*
     Queue<string> myQueue = Queue<string>();
     myQueue.push("Jose");
     myQueue.push("Manuel");
@@ -42,6 +45,8 @@ int main()
     cout << "Ultimo elemento en la cola: " << myQueue.ultimoElemento() << endl;
     manejoEstructuraDatos::vaciarQueue(myQueue);
     cout << endl << "Elementos en cola: " << myQueue.Longitud() << endl;
+    */
+
 
     return 0;
 }
