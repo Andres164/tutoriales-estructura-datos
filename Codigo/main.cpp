@@ -12,7 +12,8 @@ using namespace std;
 
 int main()
 {
-    QueueTest::test_Push();
+    int testResult = QueueTest::test_Longitud();
+    cout << endl << "Codigo de terminacion: " << testResult << endl;
 
     /*
     BinarySearchTree bst = BinarySearchTree();
