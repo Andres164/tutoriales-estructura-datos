@@ -16,10 +16,11 @@
 	<stdexcept>
 	"LinkedList.h"
 
-1675645523 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
+1676682396 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
+	<stdexcept>
 	"NodoLinkedList.h"
 
-1675576346 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\nodolinkedlist.h
+1676682396 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\nodolinkedlist.h
 	<memory>
 
 1675576224 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\nodolinkedlist.cpp
@@ -32,33 +33,35 @@
 	<iostream>
 	"../algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 
-1675644361 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\queue.h
-	"LinkedList.h"
-
-1676082518 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+1676682396 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\queue.h
 	<memory>
 	"LinkedList.h"
+
+1676682396 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.h
+	<iostream>
+	<memory>
+	"LinkedList.h"
+	"Queue.h"
 	"Stack.h"
 
-1675705215 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.h
+1676682396 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.h
 	"LinkedList.h"
 
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1676266371 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1676694006 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
 	"LinkedList.h"
+	"Queue.h"
 	"Stack.h"
 	"BinarySearchTree.h"
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
+	"QueueTest.h"
 
-1676082518 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
-	<iostream>
-	<memory>
-	"manejoEstructuraDatos.h"
+1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
 1675363076 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
@@ -169,6 +172,15 @@
 	"QueueTest.h"
 
 1676603380 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\queuetest.h
+	<vector>
+	"Queue.h"
+
+1676694511 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\queuetest.cpp
+	<iostream>
+	<exception>
+	"QueueTest.h"
+
+1676694511 d:\repositorios\tutorias-data-structures\codigo\unittesting\queuetest.h
 	<vector>
 	"Queue.h"
 
