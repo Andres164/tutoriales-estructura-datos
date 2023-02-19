@@ -11,33 +11,42 @@ int QueueTest::test_PushPop()
     cout << "--------------------------- test_Push ---------------------------\n\n";
     Queue<int> testQueue = Queue<int>();
     int codigoFinalizacion = 0;
-    int count = 0;
     try
     {
-        for(count = 0; count < QueueTest::setDeDatos.size(); count++)
-            testQueue.push(QueueTest::setDeDatos[count]);
+        for(int elemento : QueueTest::setDeDatos)
+            testQueue.push(elemento);
     }
     catch( const exception& ex )
     {
         cout << "Ocurrio una Exepcion: " << ex.what() << endl;
         codigoFinalizacion = 1;
     }
-    cout << "Elementos insertados... " << count << "/" << QueueTest::setDeDatos.size() << endl;
-
-    count = 0;
+    cout << "Push de elementos... " << ( codigoFinalizacion != 1 ? "Exitoso" : "Fallido" ) << endl;
+    int numElementos = 0, numElementosEnOrden = 0;
     try
     {
-        for(int i : QueueTest::setDeDatos)
-            count += i == testQueue.pop() ? 1 : 0;
+        for(int elemento : QueueTest::setDeDatos)
+        {
+            numElementosEnOrden += ( elemento == testQueue.pop() ? 1 : 0 );
+            numElementos++;
+        }
+    }
+    catch ( const out_of_range& ex )
+    {
+        cout << "Ocurrio una excepcion: " << ex.what() << endl;
+        codigoFinalizacion = 2;
     }
     catch ( const exception& ex)
     {
-        cout << "Ocurrion una Exepcion: " << ex.what() << endl;
-        codigoFinalizacion = 2;
+        cout << "Ocurrion una excepcion inesperada: " << ex.what() << endl;
+        codigoFinalizacion = 3;
     }
-    cout << "Elementos en orden... " << count << "/" << QueueTest::setDeDatos.size() << endl;
-    codigoFinalizacion = count != QueueTest::setDeDatos.size() ? 3 : codigoFinalizacion;
+    int numElementosEmpujados = QueueTest::setDeDatos.size();
+    cout << "Pop elementos... " << ( codigoFinalizacion < 2 ? "Exitoso" : "Fallido" ) << endl;
+    cout << "Elementos en queue... " << numElementos << "/" << numElementosEmpujados << endl;
+    cout << "Elementos en orden... " << numElementosEnOrden << "/" << numElementosEmpujados << endl;
     cout << endl << "-----------------------------------------------------------------\n\n";
+    codigoFinalizacion = numElementosEnOrden != numElementosEmpujados ? 4 : codigoFinalizacion;
     return codigoFinalizacion;
 }
 

@@ -12,8 +12,8 @@ using namespace std;
 
 int main()
 {
-    QueueTest::test_TodosLosMetodos();
-
+    int codigoFinalizacion = QueueTest::test_PushPop();
+    cout << endl << "Codigo de finalizacion: " << codigoFinalizacion << endl;
     /*
     BinarySearchTree bst = BinarySearchTree();
     bst.agregarElemento(5);
