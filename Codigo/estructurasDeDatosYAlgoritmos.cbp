@@ -52,13 +52,18 @@
 		<Unit filename="estructurasDeDatos/NodoBinaryTree.cpp" />
 		<Unit filename="estructurasDeDatos/NodoBinaryTree.h" />
 		<Unit filename="estructurasDeDatos/NodoLinkedList.h" />
-		<Unit filename="estructurasDeDatos/Queue.h" />
 		<Unit filename="estructurasDeDatos/Stack.h" />
+		<Unit filename="estructurasDeDatos/queue.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="unitTesting/QueueTest.cpp" />
 		<Unit filename="unitTesting/QueueTest.h" />
+		<Unit filename="unitTesting/StackTest.cpp" />
+		<Unit filename="unitTesting/StackTest.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
+			<code_completion />
+			<envvars />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

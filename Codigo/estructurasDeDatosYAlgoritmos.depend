@@ -44,13 +44,13 @@
 	"Queue.h"
 	"Stack.h"
 
-1676682396 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.h
+1676786657 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.h
 	"LinkedList.h"
 
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1676781466 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1676787324 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -60,6 +60,7 @@
 	"BinarySearchTree.h"
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 	"QueueTest.h"
+	"StackTest.h"
 
 1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
@@ -175,7 +176,7 @@
 	<vector>
 	"Queue.h"
 
-1676694511 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\queuetest.cpp
+1676781584 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\queuetest.cpp
 	<iostream>
 	<exception>
 	"QueueTest.h"
@@ -183,4 +184,13 @@
 1676694739 d:\repositorios\tutorias-data-structures\codigo\unittesting\queuetest.h
 	<vector>
 	"Queue.h"
+
+1676786009 d:\repositorios\tutorias-data-structures\codigo\unittesting\stacktest.h
+	<vector>
+
+1676787366 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\stacktest.cpp
+	<iostream>
+	<exception>
+	"StackTest.h"
+	"Stack.h"
 

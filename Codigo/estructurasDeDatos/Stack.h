@@ -15,7 +15,7 @@ class Stack
 
         T pop()
         {
-            T elemento = this->contenedor.elementoEnIndex(this->Longitud() -1);
+            T elemento = this->contenedor.elementoEnIndex(this->longitud() -1);
             this->contenedor.pop_back();
             return elemento;
         }
@@ -25,14 +25,14 @@ class Stack
             return this->contenedor.estaVacia();
         }
 
-        int Longitud()
+        int longitud()
         {
             return this->contenedor.Longitud();
         }
 
         T top()
         {
-            return this->contenedor.elementoEnIndex(this->Longitud() -1);
+            return this->contenedor.elementoEnIndex(this->longitud() -1);
         }
 
     private:
