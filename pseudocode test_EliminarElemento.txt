@@ -1,0 +1,15 @@
+setDeDatosEliminar = { 10, 5, 2, 4, 3, 8, 6, 7, 15, 12, 11, 13, 18, 16, 17, 19 }
+testExitoso = true;
+testBST
+elementosEliminadosConExito = 0
+
+testExitoso =  rellenarBST(testBST, setDeDatosEliminar) == 0 ? true : false;
+eliminarElementoEnAmbos(testBST, setDeDatosEliminar, 13)
+testExitoso = (!contienenLosMismosElementos(testBST, setDeDatos) ? false : testExitoso )
+elementosEliminadosConExito++
+
+eliminarElementoEnAmbos(testBST, setDeDatosEliminar, 11)
+testExitoso = (!contienenLosMismosElementos(testBST, setDeDatos) ? false : testExitoso )
+elementosEliminadosConExito++
+
+
