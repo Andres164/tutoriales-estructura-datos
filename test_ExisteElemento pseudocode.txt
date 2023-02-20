@@ -1,0 +1,24 @@
+setDeDatos = { 5, 1, 8, 0, 9 }
+
+testExitoso = true;
+try:
+foreach elemento in setDeDatos:
+	testBST.agregarElemento(elemento)
+catch
+	print "Ocurrio una excepcion al intentar insertar los elementos: " + ex.what + endl
+
+int numElementosEncontrados = 0, numFalsosPositivos = 0;
+try
+foreach elemento in setDeDatos
+	numElementosEncontrados += testBST.existeElemento(elemento);
+	numFalsosPositivos += testBST.existeElemento(elemento-100);
+catch
+	print "ocurrio una excepcion al intentar buscar los elementos insertados en el BST: " + ex.what + endl
+	testExitoso = false
+
+print "Elementos encontrados... " + numElementosEncontrados + "/" + setdeDatos.size + endl
+print "Falsos Positivos... " + numFalsosPositivos + endl
+
+if numElementosEncontrados != setDeDatos.size || numFalsosPositivos > 0
+	return false
+return testExitoso

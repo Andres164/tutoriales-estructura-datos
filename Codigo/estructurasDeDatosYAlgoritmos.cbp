@@ -55,6 +55,8 @@
 		<Unit filename="estructurasDeDatos/Stack.h" />
 		<Unit filename="estructurasDeDatos/queue.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="unitTesting/BinarySearchTreeTest.cpp" />
+		<Unit filename="unitTesting/BinarySearchTreeTest.h" />
 		<Unit filename="unitTesting/QueueTest.cpp" />
 		<Unit filename="unitTesting/QueueTest.h" />
 		<Unit filename="unitTesting/StackTest.cpp" />
