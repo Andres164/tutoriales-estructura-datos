@@ -50,7 +50,7 @@
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1676787403 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1676865143 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -61,6 +61,7 @@
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 	"QueueTest.h"
 	"StackTest.h"
+	"BinarySearchTreeTest.h"
 
 1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
@@ -193,4 +194,13 @@
 	<exception>
 	"StackTest.h"
 	"Stack.h"
+
+1676864847 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.cpp
+	"BinarySearchTreeTest.h"
+	<iostream>
+	<exception>
+
+1676863876 d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.h
+	<vector>
+	"BinarySearchTree.h"
 

@@ -7,12 +7,12 @@ class BinarySearchTreeTest
     private:
         static const std::vector<int> setDeDatos;
     public:
-        bool test_ExisteElemento();
-        bool  test_EliminarElemento();
-        bool test_EstaBalanceado();
-        bool test_EstaLleno();
-        bool test_EsPerfecto();
-        bool test_Altura();
-        bool test_GetNumNodos();
-        bool test_EstaVacio();
+        static bool test_ExisteElemento();
+        static bool test_EliminarElemento();
+        static bool test_EstaBalanceado();
+        static bool test_EstaLleno();
+        static bool test_EsPerfecto();
+        static bool test_Altura();
+        static bool test_GetNumNodos();
+        static bool test_EstaVacio();
 };

@@ -8,13 +8,13 @@
 #include "algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 #include "QueueTest.h"
 #include "StackTest.h"
+#include "BinarySearchTreeTest.h"
 
 using namespace std;
 
 int main()
 {
-    cout << StackTest::test_PushPop() << endl;
-    StackTest::test_Top();
+    cout << BinarySearchTreeTest::test_EstaVacio() << endl;
 
     return 0;
 }
