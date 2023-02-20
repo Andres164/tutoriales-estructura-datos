@@ -1,15 +1,28 @@
 setDeDatosEliminar = { 10, 5, 2, 4, 3, 8, 6, 7, 15, 12, 11, 13, 18, 16, 17, 19 }
 testExitoso = true;
 testBST
-elementosEliminadosConExito = 0
+numElementosQueSiSeEliminaron = 0
+elementosPorEliminar = Queue()
+elementosPorEliminar.push(13)
+elementosPorEliminar.push(11)
+elementosPorEliminar.push(15)
+elementosPorEliminar.push(17)
+elementosPorEliminar.push(16)
+elementosPorEliminar.push(8)
+elementosPorEliminar.push(2)
 
-testExitoso =  rellenarBST(testBST, setDeDatosEliminar) == 0 ? true : false;
-eliminarElementoEnAmbos(testBST, setDeDatosEliminar, 13)
-testExitoso = (!contienenLosMismosElementos(testBST, setDeDatos) ? false : testExitoso )
-elementosEliminadosConExito++
-
-eliminarElementoEnAmbos(testBST, setDeDatosEliminar, 11)
-testExitoso = (!contienenLosMismosElementos(testBST, setDeDatos) ? false : testExitoso )
-elementosEliminadosConExito++
-
-
+if rellenarBST(testBST, setDeDatosEliminar) == 1
+	return false
+while !elementosPorEliminar.estaVacia()
+	int elemento = elementosPorEliminar.pop()
+	eliminarElementoEnAmbos(testBST, setDeDatosEliminar, elemento)
+	testExitoso = (!contienenLosMismosElementos(testBST, setDeDatosEliminar) ? false : testExitoso )
+	try:
+	numElementosQueSiSeEliminaron += !testBST.existeElemento(elemento)
+	catch ex: print "Ocurrio una excepcion al intentar buscar un elemento eliminado: " +ex.what +endl
+print "Elementos que si fueron eliminados... " + numElementosQueSiSeEliminaron + "/" + setDeDatos.size ..
+if !testExitoso
+	print "test_EliminarElemento... fallido: el binary search tree no contiene los elementos que deberia tener
+else
+	print "test_EliminarElemento... Exitoso"
+return testExitoso
