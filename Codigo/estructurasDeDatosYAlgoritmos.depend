@@ -50,7 +50,7 @@
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1676865143 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1677005319 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -200,7 +200,7 @@
 	<iostream>
 	<exception>
 
-1676999456 d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.h
+1677002241 d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.h
 	<vector>
 	"BinarySearchTree.h"
 

@@ -50,6 +50,7 @@ bool BinarySearchTreeTest::test_EliminarElemento()
     vector<int> setDeDatosEliminar = { 10, 5, 2, 4, 3, 8, 6, 7, 15, 12, 11, 13, 18, 16, 17, 19 };
     BinarySearchTree testBST = BinarySearchTree();
     bool testExitoso = true;
+    int numElementosPorEliminar;
     int numElementosQueSiSeEliminaron = 0;
     Queue<int> elementosPorEliminar = Queue<int>();
     elementosPorEliminar.push(13);
@@ -59,6 +60,7 @@ bool BinarySearchTreeTest::test_EliminarElemento()
     elementosPorEliminar.push(16);
     elementosPorEliminar.push(8);
     elementosPorEliminar.push(2);
+    numElementosPorEliminar = elementosPorEliminar.Longitud();
 
     if(rellenarBST(testBST, setDeDatosEliminar) == 1)
         return false;
@@ -66,13 +68,38 @@ bool BinarySearchTreeTest::test_EliminarElemento()
     {
         int elemento = elementosPorEliminar.pop();
         eliminarElementoEnAmbos(testBST, setDeDatosEliminar, elemento);
+        testExitoso = ( !contienenLosMismosElementos(testBST, setDeDatosEliminar) ? false : testExitoso );
+        try
+        {
+            numElementosQueSiSeEliminaron += !testBST.existeElemento(elemento);
+        }
+        catch(const exception& ex)
+        {
+            cout << "Ocurrio una excepcion al intentar buscar un elemento eliminado: " << ex.what() << endl;
+            testExitoso = false;
+        }
     }
+    cout << "Elementos eliminados... " << numElementosQueSiSeEliminaron << "/" << numElementosPorEliminar << endl;
+    if(!testExitoso)
+        cout << "test_EliminarElemento... Fallido: el BST no contiene los elementos que deberia tener" << endl;
+    else
+        cout << "test_EliminarElemento... Exitoso" << endl;
     return testExitoso;
 }
 
 bool BinarySearchTreeTest::test_EstaBalanceado()
 {
+    using BST_test = BinarySearchTreeTest;
     bool testExitoso = true;
+    vector<int> elementosDeArbolBalanceado = { 5, 1, 0, 3, 4, 8, 6, 7, 9};
+    vector<int> elementosDeArbolInBalanceado = { 5, 1, 8, 6, 7, 9 };
+    BinarySearchTree arbolBalanceado = BinarySearchTree();
+    BinarySearchTree arbolInBalanceado = BinarySearchTree();
+    BST_test::rellenarBST(arbolBalanceado, elementosDeArbolBalanceado);
+    BST_test::rellenarBST(arbolInBalanceado, elementosDeArbolInBalanceado);
+    testExitoso = arbolBalanceado.estaBalanceado();
+    testExitoso = ( arbolInBalanceado.estaBalanceado() ? false : testExitoso );
+    cout << "test_EstaBalanceado... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
 
     return testExitoso;
 }
@@ -93,8 +120,19 @@ bool BinarySearchTreeTest::test_EsPerfecto()
 
 bool BinarySearchTreeTest::test_Altura()
 {
+    using BST_test = BinarySearchTreeTest;
     bool testExitoso = true;
-
+    BinarySearchTree bst = BinarySearchTree();
+    vector<int> setDatos = BST_test::setDeDatos;
+    BST_test::rellenarBST(bst, setDatos);
+    testExitoso = ( bst.altura() == 2 ? true : false );
+    bst.agregarElemento(-1);
+    testExitoso = ( bst.altura() != 3 ? false : testExitoso);
+    bst.eliminarElemento(9);
+    testExitoso = ( bst.altura() != 3 ? false : testExitoso);
+    bst.eliminarElemento(-1);
+    testExitoso = ( bst.altura() != 2 ? false : testExitoso);
+    cout << "test_Altura... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
     return testExitoso;
 }
 
@@ -148,7 +186,6 @@ bool BinarySearchTreeTest::test_EstaVacio()
     cout << "test_EstaVacio... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
     return testExitoso;
 }
-
 // PRIVATE
 void BinarySearchTreeTest::eliminarElementoEnAmbos(BinarySearchTree& BST, vector<int>& vector, int elementoAEliminar)
 {
