@@ -9,6 +9,21 @@ using BST_test = BinarySearchTreeTest;
 
 const vector<int> BinarySearchTreeTest::setDeDatos = { 5, 1, 8, 0, 9 };
 
+bool BinarySearchTreeTest::test_AgregarElemento()
+{
+    cout << "--------------------------- test_AgregarElemento ---------------------------\n\n";
+    bool testExitoso = true;
+    BinarySearchTree testBST = BinarySearchTree();
+    testExitoso = BST_test::rellenarBST(testBST, BST_test::setDeDatos) == 0 ? true : false;
+    if(!BST_test::contienenLosMismosElementos(testBST, BST_test::setDeDatos))
+    {
+        cout << "El Binary Search Tree no contiene todos los elementos que fueron insertados" << endl;
+        testExitoso = false;
+    }
+    cout << "test_AgregarElemento... " << ( testExitoso ? "Exitoso" : "Fallido" ) << "\n\n\n";
+    return testExitoso;
+}
+
 bool BinarySearchTreeTest::test_ExisteElemento()
 {
     cout << "--------------------------- test_ExisteElemento ---------------------------\n\n";
@@ -16,7 +31,7 @@ bool BinarySearchTreeTest::test_ExisteElemento()
     BinarySearchTree testBST = BinarySearchTree();
     vector<int> setDatos = BST_test::setDeDatos;
     BST_test::rellenarBST(testBST, setDatos);
-    int numElementosEncontrados = 0, numFalsosPositivos = 0;
+    unsigned int numElementosEncontrados = 0, numFalsosPositivos = 0;
     try
     {
         for(int elemento : BST_test::setDeDatos)
@@ -34,12 +49,13 @@ bool BinarySearchTreeTest::test_ExisteElemento()
     cout << "Falsos positivos... " << numFalsosPositivos << endl;
     if(numElementosEncontrados != BST_test::setDeDatos.size() || numFalsosPositivos > 0)
         testExitoso = false;
-    cout << "test_ExisteElemento... " << ( testExitoso ?  "Exitoso" : "Fallido" ) << endl;
+    cout << "test_ExisteElemento... " << ( testExitoso ?  "Exitoso" : "Fallido" ) << "\n\n\n";
     return testExitoso;
 }
 
 bool BinarySearchTreeTest::test_EliminarElemento()
 {
+    cout << "--------------------------- test_EliminarElemento ---------------------------\n\n";
     vector<int> setDeDatosEliminar = { 10, 5, 2, 4, 3, 8, 6, 7, 15, 12, 11, 13, 18, 16, 17, 19 };
     BinarySearchTree testBST = BinarySearchTree();
     bool testExitoso = true;
@@ -74,14 +90,15 @@ bool BinarySearchTreeTest::test_EliminarElemento()
     }
     cout << "Elementos eliminados... " << numElementosQueSiSeEliminaron << "/" << numElementosPorEliminar << endl;
     if(!testExitoso)
-        cout << "test_EliminarElemento... Fallido: el BST no contiene los elementos que deberia tener" << endl;
+        cout << "test_EliminarElemento... Fallido: el BST no contiene los elementos que deberia tener" << "\n\n\n";
     else
-        cout << "test_EliminarElemento... Exitoso" << endl;
+        cout << "test_EliminarElemento... Exitoso" << "\n\n\n";
     return testExitoso;
 }
 
 bool BinarySearchTreeTest::test_EstaBalanceado()
 {
+    cout << "--------------------------- test_EstaBalanceado ---------------------------\n\n";
     bool testExitoso = true;
     vector<int> elementosDeArbolBalanceado = { 5, 1, 0, 3, 4, 8, 6, 7, 9};
     vector<int> elementosDeArbolInBalanceado = { 5, 1, 8, 6, 7, 9 };
@@ -91,13 +108,14 @@ bool BinarySearchTreeTest::test_EstaBalanceado()
     BST_test::rellenarBST(arbolInBalanceado, elementosDeArbolInBalanceado);
     testExitoso = arbolBalanceado.estaBalanceado();
     testExitoso = ( arbolInBalanceado.estaBalanceado() ? false : testExitoso );
-    cout << "test_EstaBalanceado... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
+    cout << "test_EstaBalanceado... " << ( testExitoso ? "Exitoso" : "Fallido" ) << "\n\n\n";
 
     return testExitoso;
 }
 
 bool BinarySearchTreeTest::test_EstaLleno()
 {
+    cout << "--------------------------- test_EstaLleno ---------------------------\n\n";
     vector<int> elementosArbolLleno = { 12, 5, 15, 2, 8 };
     BinarySearchTree testBST = BinarySearchTree();
     BST_test::rellenarBST(testBST, elementosArbolLleno);
@@ -108,19 +126,35 @@ bool BinarySearchTreeTest::test_EstaLleno()
     testBST.agregarElemento(10);
     testExitoso = !testBST.estaLleno() ? false : testExitoso;
 
-    cout << "test_EstaLleno... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
+    cout << "test_EstaLleno... " << ( testExitoso ? "Exitoso" : "Fallido" ) << "\n\n\n";
     return testExitoso;
 }
 
 bool BinarySearchTreeTest::test_EsPerfecto()
 {
+    cout << "--------------------------- test_EsPerfecto ---------------------------\n\n";
     bool testExitoso = true;
-
+    vector<int> elementosArbolPerfecto = {10, 5, 3, 7, 15, 12, 18};
+    BinarySearchTree testBST = BinarySearchTree();
+    BST_test::rellenarBST(testBST, elementosArbolPerfecto);
+    try
+    {
+        testExitoso = testBST.esPerfecto();
+        testBST.eliminarElemento(7);
+        testExitoso = testBST.esPerfecto() ? false : testExitoso;
+    }
+    catch(const exception& ex)
+    {
+        cout << "Ocurrio una excepcion inesperada: " << ex.what() << endl;
+        testExitoso = false;
+    }
+    cout << "test_EsPerfecto... " << ( testExitoso ? "Exitoso" : "Fallido" ) << "\n\n\n";
     return testExitoso;
 }
 
 bool BinarySearchTreeTest::test_Altura()
 {
+    cout << "--------------------------- test_Altura ---------------------------\n\n";
     bool testExitoso = true;
     BinarySearchTree bst = BinarySearchTree();
     vector<int> setDatos = BST_test::setDeDatos;
@@ -132,18 +166,19 @@ bool BinarySearchTreeTest::test_Altura()
     testExitoso = ( bst.altura() != 3 ? false : testExitoso);
     bst.eliminarElemento(-1);
     testExitoso = ( bst.altura() != 2 ? false : testExitoso);
-    cout << "test_Altura... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
+    cout << "test_Altura... " << ( testExitoso ? "Exitoso" : "Fallido" ) << "\n\n\n";
     return testExitoso;
 }
 
 bool BinarySearchTreeTest::test_GetNumNodos()
 {
+    cout << "--------------------------- test_GetNumNodos ---------------------------\n\n";
     BinarySearchTree testBST = BinarySearchTree();
     bool testExitoso = true;
-    int i;
+    unsigned int i;
     try
     {
-        for(i = 0; i < BST_test::setDeDatos.size()/2; i++)
+        for(unsigned i = 0; i < BST_test::setDeDatos.size()/2; i++)
             testBST.agregarElemento(BST_test::setDeDatos[i]);
     }
     catch(const exception& ex)
@@ -163,12 +198,13 @@ bool BinarySearchTreeTest::test_GetNumNodos()
         testExitoso = false;
     }
     testExitoso = testBST.getNumNodos() != BST_test::setDeDatos.size() ? false : testExitoso;
-    cout << "testGetNumNodos... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
+    cout << "testGetNumNodos... " << ( testExitoso ? "Exitoso" : "Fallido" ) << "\n\n\n";
     return testExitoso;
 }
 
 bool BinarySearchTreeTest::test_EstaVacio()
 {
+    cout << "--------------------------- test_EstaVacio ---------------------------\n\n";
     bool testExitoso = true;
     BinarySearchTree testBST = BinarySearchTree();
     try
@@ -182,8 +218,21 @@ bool BinarySearchTreeTest::test_EstaVacio()
         cout << "Ocurrio una excepcion: " << ex.what() << endl;
         testExitoso = false;
     }
-    cout << "test_EstaVacio... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
+    cout << "test_EstaVacio... " << ( testExitoso ? "Exitoso" : "Fallido" ) << "\n\n\n";
     return testExitoso;
+}
+
+void BinarySearchTreeTest::test_TodosLosMetodos()
+{
+    BST_test::test_AgregarElemento();
+    BST_test::test_ExisteElemento();
+    BST_test::test_EliminarElemento();
+    BST_test::test_EstaBalanceado();
+    BST_test::test_EstaLleno();
+    BST_test::test_EsPerfecto();
+    BST_test::test_Altura();
+    BST_test::test_GetNumNodos();
+    BST_test::test_EstaVacio();
 }
 
 // PRIVATE
@@ -212,7 +261,7 @@ void BinarySearchTreeTest::eliminarElementoEnAmbos(BinarySearchTree& BST, vector
     }
 }
 
-int BinarySearchTreeTest::rellenarBST(BinarySearchTree& BST, vector<int>& vector)
+int BinarySearchTreeTest::rellenarBST(BinarySearchTree& BST, const vector<int>& vector)
 {
    try
    {
@@ -227,7 +276,7 @@ int BinarySearchTreeTest::rellenarBST(BinarySearchTree& BST, vector<int>& vector
    return 0;
 }
 
-bool BinarySearchTreeTest::contienenLosMismosElementos(BinarySearchTree& BST, vector<int>& vector)
+bool BinarySearchTreeTest::contienenLosMismosElementos(BinarySearchTree& BST, const vector<int>& vector)
 {
     try
     {

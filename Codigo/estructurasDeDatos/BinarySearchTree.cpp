@@ -121,8 +121,8 @@ bool BinarySearchTree::estaLleno()
 
 bool BinarySearchTree::esPerfecto()
 {
-    int nodosQueDebeTener = pow( 2, this->altura() +1 ) -1;
-    return this->numDeNodos == nodosQueDebeTener ? true : false;
+    int nodosQueDebeTener = std::pow( 2, this->altura() +1 ) -1;
+    return this->numDeNodos == nodosQueDebeTener;
 }
 
 int BinarySearchTree::altura()

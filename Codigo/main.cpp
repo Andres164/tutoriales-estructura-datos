@@ -14,7 +14,8 @@ using namespace std;
 
 int main()
 {
-    cout << BinarySearchTreeTest::test_ExisteElemento() << endl;
+    //BinarySearchTreeTest::test_TodosLosMetodos();
+    //cout << BinarySearchTreeTest::test_AgregarElemento() << endl;
 
     return 0;
 }

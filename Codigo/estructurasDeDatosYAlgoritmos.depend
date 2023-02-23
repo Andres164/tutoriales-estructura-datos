@@ -109,7 +109,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1677131452 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1677176303 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -135,7 +135,7 @@
 1675923292 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodobinarytree.h
 	<memory>
 
-1677130632 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
+1677174219 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
 	<iostream>
 	<queue>
 	<algorithm>
@@ -209,7 +209,7 @@
 1677128380 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\stacktest.h
 	<vector>
 
-1677128380 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\binarysearchtreetest.h
+1677176303 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\binarysearchtreetest.h
 	<vector>
 	"BinarySearchTree.h"
 
@@ -219,7 +219,7 @@
 	"StackTest.h"
 	"Stack.h"
 
-1677131868 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\binarysearchtreetest.cpp
+1677176559 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\binarysearchtreetest.cpp
 	"BinarySearchTreeTest.h"
 	<iostream>
 	<exception>
