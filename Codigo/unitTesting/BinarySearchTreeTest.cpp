@@ -5,28 +5,21 @@
 #include "Queue.h"
 
 using namespace std;
+using BST_test = BinarySearchTreeTest;
 
 const vector<int> BinarySearchTreeTest::setDeDatos = { 5, 1, 8, 0, 9 };
 
 bool BinarySearchTreeTest::test_ExisteElemento()
 {
     cout << "--------------------------- test_ExisteElemento ---------------------------\n\n";
-    using BST_Test = BinarySearchTreeTest;
     bool testExitoso = true;
     BinarySearchTree testBST = BinarySearchTree();
-    try
-    {
-        for(int elemento : BST_Test::setDeDatos)
-            testBST.agregarElemento(elemento);
-    }
-    catch(const exception& ex)
-    {
-        cout << "Ocurrio una excepcion al intentar insertar los elementos: " << ex.what() << endl;
-    }
+    vector<int> setDatos = BST_test::setDeDatos;
+    BST_test::rellenarBST(testBST, setDatos);
     int numElementosEncontrados = 0, numFalsosPositivos = 0;
     try
     {
-        for(int elemento : BST_Test::setDeDatos)
+        for(int elemento : BST_test::setDeDatos)
         {
             numElementosEncontrados += testBST.existeElemento(elemento);
             numFalsosPositivos += testBST.existeElemento(elemento-100);
@@ -37,9 +30,9 @@ bool BinarySearchTreeTest::test_ExisteElemento()
         cout << "Ocurrio una excepcion al intentar buscar los elementos insertados en el BST" << ex.what() << endl;
         testExitoso = false;
     }
-    cout << "Elementos encontrados... " << numElementosEncontrados << "/" << BST_Test::setDeDatos.size() << endl;
+    cout << "Elementos encontrados... " << numElementosEncontrados << "/" << BST_test::setDeDatos.size() << endl;
     cout << "Falsos positivos... " << numFalsosPositivos << endl;
-    if(numElementosEncontrados != BST_Test::setDeDatos.size() || numFalsosPositivos > 0)
+    if(numElementosEncontrados != BST_test::setDeDatos.size() || numFalsosPositivos > 0)
         testExitoso = false;
     cout << "test_ExisteElemento... " << ( testExitoso ?  "Exitoso" : "Fallido" ) << endl;
     return testExitoso;
@@ -89,7 +82,6 @@ bool BinarySearchTreeTest::test_EliminarElemento()
 
 bool BinarySearchTreeTest::test_EstaBalanceado()
 {
-    using BST_test = BinarySearchTreeTest;
     bool testExitoso = true;
     vector<int> elementosDeArbolBalanceado = { 5, 1, 0, 3, 4, 8, 6, 7, 9};
     vector<int> elementosDeArbolInBalanceado = { 5, 1, 8, 6, 7, 9 };
@@ -106,7 +98,6 @@ bool BinarySearchTreeTest::test_EstaBalanceado()
 
 bool BinarySearchTreeTest::test_EstaLleno()
 {
-    using BST_test = BinarySearchTreeTest;
     vector<int> elementosArbolLleno = { 12, 5, 15, 2, 8 };
     BinarySearchTree testBST = BinarySearchTree();
     BST_test::rellenarBST(testBST, elementosArbolLleno);
@@ -130,7 +121,6 @@ bool BinarySearchTreeTest::test_EsPerfecto()
 
 bool BinarySearchTreeTest::test_Altura()
 {
-    using BST_test = BinarySearchTreeTest;
     bool testExitoso = true;
     BinarySearchTree bst = BinarySearchTree();
     vector<int> setDatos = BST_test::setDeDatos;
@@ -148,32 +138,31 @@ bool BinarySearchTreeTest::test_Altura()
 
 bool BinarySearchTreeTest::test_GetNumNodos()
 {
-    using BST_Test = BinarySearchTreeTest;
+    BinarySearchTree testBST = BinarySearchTree();
     bool testExitoso = true;
     int i;
-    BinarySearchTree testBST = BinarySearchTree();
     try
     {
-        for(i = 0; i < BST_Test::setDeDatos.size()/2; i++)
-            testBST.agregarElemento(BST_Test::setDeDatos[i]);
+        for(i = 0; i < BST_test::setDeDatos.size()/2; i++)
+            testBST.agregarElemento(BST_test::setDeDatos[i]);
     }
     catch(const exception& ex)
     {
         cout << "Ocurrio una excepcion al intentar insertar los elementos: " << ex.what() << endl;
         testExitoso = false;
     }
-    testExitoso = testBST.getNumNodos() != BST_Test::setDeDatos.size()/2 ? false : testExitoso;
+    testExitoso = testBST.getNumNodos() != BST_test::setDeDatos.size()/2 ? false : testExitoso;
     try
     {
-        for(; i < BST_Test::setDeDatos.size(); i++)
-            testBST.agregarElemento(BST_Test::setDeDatos[i]);
+        for(; i < BST_test::setDeDatos.size(); i++)
+            testBST.agregarElemento(BST_test::setDeDatos[i]);
     }
     catch(const exception& ex)
     {
         cout << "Ocurrio una excepcion al intentar insertar los elementos: " << ex.what() << endl;
         testExitoso = false;
     }
-    testExitoso = testBST.getNumNodos() != BST_Test::setDeDatos.size() ? false : testExitoso;
+    testExitoso = testBST.getNumNodos() != BST_test::setDeDatos.size() ? false : testExitoso;
     cout << "testGetNumNodos... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
     return testExitoso;
 }
@@ -196,6 +185,7 @@ bool BinarySearchTreeTest::test_EstaVacio()
     cout << "test_EstaVacio... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
     return testExitoso;
 }
+
 // PRIVATE
 void BinarySearchTreeTest::eliminarElementoEnAmbos(BinarySearchTree& BST, vector<int>& vector, int elementoAEliminar)
 {

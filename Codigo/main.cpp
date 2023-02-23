@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-    cout << BinarySearchTreeTest::test_EstaLleno() << endl;
+    cout << BinarySearchTreeTest::test_ExisteElemento() << endl;
 
     return 0;
 }

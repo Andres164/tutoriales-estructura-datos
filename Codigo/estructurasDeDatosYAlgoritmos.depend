@@ -109,7 +109,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1677130632 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1677131452 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -218,4 +218,11 @@
 	<exception>
 	"StackTest.h"
 	"Stack.h"
+
+1677131868 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\binarysearchtreetest.cpp
+	"BinarySearchTreeTest.h"
+	<iostream>
+	<exception>
+	<stdexcept>
+	"Queue.h"
 
