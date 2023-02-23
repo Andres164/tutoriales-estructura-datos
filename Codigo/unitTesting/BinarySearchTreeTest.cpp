@@ -106,8 +106,18 @@ bool BinarySearchTreeTest::test_EstaBalanceado()
 
 bool BinarySearchTreeTest::test_EstaLleno()
 {
-    bool testExitoso = true;
+    using BST_test = BinarySearchTreeTest;
+    vector<int> elementosArbolLleno = { 12, 5, 15, 2, 8 };
+    BinarySearchTree testBST = BinarySearchTree();
+    BST_test::rellenarBST(testBST, elementosArbolLleno);
+    bool testExitoso = testBST.estaLleno();
 
+    testBST.agregarElemento(6);
+    testExitoso = testBST.estaLleno() ? false : testExitoso;
+    testBST.agregarElemento(10);
+    testExitoso = !testBST.estaLleno() ? false : testExitoso;
+
+    cout << "test_EstaLleno... " << ( testExitoso ? "Exitoso" : "Fallido" ) << endl;
     return testExitoso;
 }
 

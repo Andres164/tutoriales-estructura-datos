@@ -1,0 +1,13 @@
+elementosArbolLleno = { 12, 5, 15, 2, 8 }
+testBST = BinarySearchTree()
+rellenarBST(testBST, elementosArbolLleno)
+bool testExitoso = estaLleno(arbolLleno)
+
+testBST.agregarElemento(6)
+testExitoso = estaLleno(testBST) ? false : testExitoso
+
+testBST.agregarElemento(10)
+testExitoso = !estaLleno(testBST) ? false : testExitoso
+
+print "test_EstaLleno... " + ( testEstaLleno ? "Exitoso" : "Fallido ) + endl
+return testExitoso

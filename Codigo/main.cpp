@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-    cout << BinarySearchTreeTest::test_Altura() << endl;
+    cout << BinarySearchTreeTest::test_EstaLleno() << endl;
 
     return 0;
 }

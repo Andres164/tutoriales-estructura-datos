@@ -189,9 +189,9 @@ bool BinarySearchTree::estaLleno(shared_ptr<NodoBinaryTree> raiz)
 {
     if(!raiz->getIzquierdo() != !raiz->getDerecho())
         return false;
-    bool izquierdoEsCompleto = raiz->getIzquierdo() ? estaLleno(raiz->getIzquierdo()) : true;
-    bool derechoEsCompleto = raiz->getDerecho() ? estaLleno(raiz->getDerecho()) : true;
-    return izquierdoEsCompleto && derechoEsCompleto;
+    bool izquierdoEstaLleno = raiz->getIzquierdo() ? estaLleno(raiz->getIzquierdo()) : true;
+    bool derechoEstaLleno = raiz->getDerecho() ? estaLleno(raiz->getDerecho()) : true;
+    return izquierdoEstaLleno && derechoEstaLleno;
 }
 
 int BinarySearchTree::altura(shared_ptr<NodoBinaryTree> raiz)

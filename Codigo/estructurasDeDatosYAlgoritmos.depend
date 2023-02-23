@@ -94,7 +94,7 @@
 1676434433 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodolinkedlist.h
 	<memory>
 
-1676435510 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.h
+1677128380 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.h
 	"LinkedList.h"
 
 1676353434 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.cpp
@@ -109,7 +109,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1676609254 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1677130632 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -119,6 +119,8 @@
 	"BinarySearchTree.h"
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 	"QueueTest.h"
+	"StackTest.h"
+	"BinarySearchTreeTest.h"
 
 1675921628 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.cpp
 	"BinaryTree.h"
@@ -133,7 +135,7 @@
 1675923292 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\nodobinarytree.h
 	<memory>
 
-1676345322 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
+1677130632 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarysearchtree.cpp
 	<iostream>
 	<queue>
 	<algorithm>
@@ -168,12 +170,12 @@
 	<cmath>
 	"BinarySearchTree.h"
 
-1676610133 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\queuetest.cpp
+1677128380 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\queuetest.cpp
 	<iostream>
 	<exception>
 	"QueueTest.h"
 
-1676603380 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\queuetest.h
+1677128380 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\queuetest.h
 	<vector>
 	"Queue.h"
 
@@ -203,4 +205,17 @@
 1677002241 d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.h
 	<vector>
 	"BinarySearchTree.h"
+
+1677128380 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\stacktest.h
+	<vector>
+
+1677128380 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\binarysearchtreetest.h
+	<vector>
+	"BinarySearchTree.h"
+
+1677128380 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\stacktest.cpp
+	<iostream>
+	<exception>
+	"StackTest.h"
+	"Stack.h"
 
