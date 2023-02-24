@@ -20,6 +20,7 @@ class LinkedListTest
         static bool test_Longitud();
 
     private:
-        static int rellenarLinkedList(LinkedList<int>&, const vector<int>&);
+        static int listaPushBackVector(LinkedList<int>&, const vector<int>&);
+        static int listaPushFrontVector(LinkedList<int>&, const vector<int>&);
         static bool contienenLosMismosElementos(LinkedList<int>&, const vector<int>&);
 };

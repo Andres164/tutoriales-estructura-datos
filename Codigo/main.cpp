@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    //cout << BinarySearchTreeTest::test_GetNumNodos() << endl;
+    cout << LinkedListTest::test_push_front() << endl;
 
     return 0;
 }
