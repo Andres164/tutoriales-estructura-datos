@@ -175,10 +175,10 @@ bool BinarySearchTreeTest::test_GetNumNodos()
     cout << "--------------------------- test_GetNumNodos ---------------------------\n\n";
     BinarySearchTree testBST = BinarySearchTree();
     bool testExitoso = true;
-    unsigned int i;
+    unsigned int i = 0;
     try
     {
-        for(unsigned i = 0; i < BST_test::setDeDatos.size()/2; i++)
+        for(; i < BST_test::setDeDatos.size()/2; i++)
             testBST.agregarElemento(BST_test::setDeDatos[i]);
     }
     catch(const exception& ex)

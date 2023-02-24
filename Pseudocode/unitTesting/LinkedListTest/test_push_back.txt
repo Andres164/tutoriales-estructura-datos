@@ -1,0 +1,10 @@
+testExitoso
+testList = LinkedList()
+elementosInsertados = rellenarLinkedList(testList, setDeDatos)
+print "Elementos insertados correctamente... " + elementosInsertados +"/"+ setDatos.size() + endl
+print "
+testExitoso = contienenLosMismosElementos(testList, setDeDatos)
+printf "¿El linked list contiene los elementos insertados? " + testExitoso ? "Si": "No" + endl
+testExitoso = elementosInsertados != setDeDatos.size() ? false : testExitoso
+print "test_InsertarElemento... " + testExitoso ? "Exitoso" : "Fallido" + endl
+return testExitoso

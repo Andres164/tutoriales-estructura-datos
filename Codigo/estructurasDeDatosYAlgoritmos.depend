@@ -87,7 +87,7 @@
 	"Queue.h"
 	"Stack.h"
 
-1676435031 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
+1677215404 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
 	<stdexcept>
 	"NodoLinkedList.h"
 
@@ -109,7 +109,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1677176303 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1677216988 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -121,6 +121,7 @@
 	"QueueTest.h"
 	"StackTest.h"
 	"BinarySearchTreeTest.h"
+	"LinkedListTest.h"
 
 1675921628 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.cpp
 	"BinaryTree.h"
@@ -219,10 +220,14 @@
 	"StackTest.h"
 	"Stack.h"
 
-1677176559 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\binarysearchtreetest.cpp
+1677211843 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\binarysearchtreetest.cpp
 	"BinarySearchTreeTest.h"
 	<iostream>
 	<exception>
 	<stdexcept>
 	"Queue.h"
+
+1677217140 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\linkedlisttest.h
+	<vector>
+	"LinkedList.h"
 

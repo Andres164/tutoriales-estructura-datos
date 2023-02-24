@@ -9,13 +9,13 @@
 #include "QueueTest.h"
 #include "StackTest.h"
 #include "BinarySearchTreeTest.h"
+#include "LinkedListTest.h"
 
 using namespace std;
 
 int main()
 {
-    //BinarySearchTreeTest::test_TodosLosMetodos();
-    //cout << BinarySearchTreeTest::test_AgregarElemento() << endl;
+    //cout << BinarySearchTreeTest::test_GetNumNodos() << endl;
 
     return 0;
 }

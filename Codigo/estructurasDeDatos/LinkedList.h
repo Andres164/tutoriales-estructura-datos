@@ -10,8 +10,7 @@ private:
     std::shared_ptr< NodoLinkedList<T> > raiz;
     int longitud;
 public:
-    LinkedList() : raiz(nullptr), longitud(0)
-    { }
+    LinkedList() : raiz(nullptr), longitud(0) { }
 
     std::shared_ptr< NodoLinkedList<T> > getRaiz()
     {
