@@ -1,6 +1,7 @@
 #include <iostream>
 #include <exception>
 #include "LinkedListTest.h"
+#include "../algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 
 const vector<int> LinkedListTest::setDeDatos = { -20, 10, -1586, -2,147,483,648, 12, 10, -20, 789, 2,147,483,647, 0, 81, 39, -69 };
 
@@ -47,13 +48,54 @@ bool LinkedListTest::test_pop_back()
 {
     bool testExitoso = true;
 
+    LinkedList<int> testList = LinkedList<int>();
+    LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
+
+    std::vector<int> mitadSetDeDatos = std::vector<int>(LinkedListTest::setDeDatos.size()/2);
+    std::vector<int>::const_iterator itMitadSetDeDatos = LinkedListTest::setDeDatos.begin() +LinkedListTest::setDeDatos.size()/2;
+    std::copy(LinkedListTest::setDeDatos.begin(), itMitadSetDeDatos, mitadSetDeDatos.begin());
+
+    unsigned int elementosEliminados = 0;
+    try
+    {
+        for(; elementosEliminados < mitadSetDeDatos.size(); elementosEliminados++)
+            testList.pop_back();
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar hacer pop_back: " << ex.what() << std::endl;
+        testExitoso = false;
+    }
+    std::cout << "Elementos eliminados... " << elementosEliminados << "/" << mitadSetDeDatos.size() << std::endl;
+
+    testExitoso = ( !LinkedListTest::contienenLosMismosElementos(testList, mitadSetDeDatos) ? false : testExitoso ) ;
+    std::cout << "test_pop_back... " << ( testExitoso ? "Exitoso" : "Fallido" ) << std::endl;
     return testExitoso;
 }
 
 bool LinkedListTest::test_pop_front()
 {
     bool testExitoso = true;
-
+    LinkedList<int> testList = LinkedList<int>();
+    LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
+    std::vector<int> mitadSetDeDatos = std::vector<int>(LinkedListTest::setDeDatos.size()/2);
+    std::vector<int>::const_iterator itMitadSetDeDatos = LinkedListTest::setDeDatos.begin() +LinkedListTest::setDeDatos.size()/2;
+    std::copy(itMitadSetDeDatos, LinkedListTest::setDeDatos.end(), mitadSetDeDatos.begin());
+    unsigned int elementosEliminados = 0;
+    try
+    {
+        for(; elementosEliminados < mitadSetDeDatos.size(); elementosEliminados++)
+            testList.pop_front();
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar hacer pop_front: " << ex.what() << std::endl;
+        testExitoso = false;
+    }
+    std::cout << "Elementos eliminados... " << elementosEliminados << "/" << mitadSetDeDatos.size() << std::endl;
+    manejoEstructuraDatos::imprimirLinkedList(testList);
+    testExitoso = ( !LinkedListTest::contienenLosMismosElementos(testList, mitadSetDeDatos) ? false : testExitoso ) ;
+    std::cout << "test_pop_front... " << ( testExitoso ? "Exitoso" : "Fallido" ) << std::endl;
     return testExitoso;
 }
 

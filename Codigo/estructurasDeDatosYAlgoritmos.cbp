@@ -44,7 +44,6 @@
 		<Unit filename="algoritmosEstructurasDatos/algoritmosAcomodo.h" />
 		<Unit filename="algoritmosEstructurasDatos/manejoArreglos.cpp" />
 		<Unit filename="algoritmosEstructurasDatos/manejoArreglos.h" />
-		<Unit filename="algoritmosEstructurasDatos/manejoEstructuraDatos.cpp" />
 		<Unit filename="algoritmosEstructurasDatos/manejoEstructuraDatos.h" />
 		<Unit filename="estructurasDeDatos/BinarySearchTree.cpp" />
 		<Unit filename="estructurasDeDatos/BinarySearchTree.h" />

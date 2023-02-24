@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    cout << LinkedListTest::test_push_front() << endl;
+    cout << LinkedListTest::test_pop_front() << endl;
 
     return 0;
 }
