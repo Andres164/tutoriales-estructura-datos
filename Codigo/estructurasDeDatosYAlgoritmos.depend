@@ -16,7 +16,7 @@
 	<stdexcept>
 	"LinkedList.h"
 
-1676682396 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
+1677388369 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
 	<stdexcept>
 	"NodoLinkedList.h"
 
@@ -50,7 +50,7 @@
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1677005319 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1677390009 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -62,6 +62,7 @@
 	"QueueTest.h"
 	"StackTest.h"
 	"BinarySearchTreeTest.h"
+	"LinkedListTest.h"
 
 1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
@@ -164,7 +165,7 @@
 	<memory>
 	"NodoBinaryTree.h"
 
-1676266446 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\binarysearchtree.cpp
+1677388369 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\binarysearchtree.cpp
 	<iostream>
 	<queue>
 	<algorithm>
@@ -198,12 +199,14 @@
 	"StackTest.h"
 	"Stack.h"
 
-1676864847 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.cpp
+1677388369 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.cpp
 	"BinarySearchTreeTest.h"
 	<iostream>
 	<exception>
+	<stdexcept>
+	"Queue.h"
 
-1677002241 d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.h
+1677388369 d:\repositorios\tutorias-data-structures\codigo\unittesting\binarysearchtreetest.h
 	<vector>
 	"BinarySearchTree.h"
 
@@ -235,4 +238,8 @@
 	<iostream>
 	<exception>
 	"LinkedListTest.h"
+
+1677388369 d:\repositorios\tutorias-data-structures\codigo\unittesting\linkedlisttest.h
+	<vector>
+	"LinkedList.h"
 
