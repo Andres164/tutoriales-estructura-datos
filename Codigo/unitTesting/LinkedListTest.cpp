@@ -105,7 +105,7 @@ bool LinkedListTest::test_InsertarElemento()
     LinkedList<int> testList = LinkedList<int>();
     std::cout << "This is befor crash" << std::endl;
     LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
-    std::cout << "This won't print";
+    std::cout << "This won't print 1" << std::endl;
     int valorInsertado = 702;
     try
     {
@@ -117,10 +117,7 @@ bool LinkedListTest::test_InsertarElemento()
         std::cout << "Ocurrio una excepcion al intentar insertar el elemento en el LinkedList: " << ex.what() << std::endl;
         testExitoso = false;
     }
-    catch(...)
-    {
-        std::cout << "Ocurrio una excepcion desconocida" << std::endl;
-    }
+    std::cout << "This won't print 2" std::endl;
     try
     {
         std::vector<int> setDatosModificado = std::vector<int>();
@@ -132,6 +129,7 @@ bool LinkedListTest::test_InsertarElemento()
     {
         std::cout << "Ocurrio una excepcion al intentar crear el nuevo set de datos con el nuevo elemento: " << ex.what() << std::endl;
     }
+    std::cout << "This won't print 3";
     //std::cout << "Elemento en el Medio: " << setDatosModificado[setDatosModificado.size()/2] << std::endl;
     return testExitoso;
 }
