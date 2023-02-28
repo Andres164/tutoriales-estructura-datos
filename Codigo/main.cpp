@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    cout << LinkedListTest::test_InsertarElemento() << endl;
+    cout << LinkedListTest::test_Vaciar() << endl;
 
     return 0;
 }

@@ -102,7 +102,7 @@ bool LinkedListTest::test_pop_front()
 bool LinkedListTest::test_InsertarElemento()
 {
     bool testExitoso = true;
-    LinkedList<int> testList = LinkedList<int>(LinkedListTest::setDeDatos.size());
+    LinkedList<int> testList = LinkedList<int>();
     LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
     int valorInsertadoAlInicio = 560, valorInsertadoAlMedio = 702;
     try
@@ -129,7 +129,7 @@ bool LinkedListTest::test_InsertarElemento()
         std::cout << "Ocurrio una excepcion al intentar crear el nuevo set de datos con los nuevos elementos: " << ex.what() << std::endl;
         testExitoso = false;
     }
-    bool seEncuentraValorAlInicio, seEncuentraValorAlMedio, seEncontraronTodosLosElementos;
+    bool seEncuentraValorAlInicio = 0, seEncuentraValorAlMedio = 0, seEncontraronTodosLosElementos = 0;
     try
     {
         seEncuentraValorAlInicio = testList.elementoEnIndex(0) == valorInsertadoAlInicio;
@@ -149,8 +149,14 @@ bool LinkedListTest::test_InsertarElemento()
         std::cout << "Ocurrio una excepcion al intentar verificar todos los elementos que deben estar en la lista existan: " <<  ex.what() << std::endl;
         testExitoso = false;
     }
-
-    std::cout << "Elemento en el Medio: " << setDatosModificado[setDatosModificado.size()/2] << std::endl;
+    testExitoso = !seEncuentraValorAlInicio || !seEncuentraValorAlMedio || !seEncontraronTodosLosElementos ? false : testExitoso;
+    std::cout << "test_InsertarElemento... " << ( testExitoso ? "EXITOSO" : "FALLIDO" ) << std::endl;
+    if(!testExitoso)
+    {
+        std::cout << "Se encontro el valor insertado al inicio del LinkedList... " << ( seEncuentraValorAlInicio ? "SI" : "NO" ) << std::endl;
+        std::cout << "Se encontro el valor insertado al medio del LinkedList... " << ( seEncuentraValorAlMedio ? "SI" : "NO" ) << std::endl;
+        std::cout << "Todos los elementos insertados estan en orden... " << ( seEncontraronTodosLosElementos ? "SI" : "NO" ) << std::endl;
+    }
     return testExitoso;
 }
 
@@ -185,7 +191,21 @@ bool LinkedListTest::test_EstaVacia()
 bool LinkedListTest::test_Vaciar()
 {
     bool testExitoso = true;
-
+    LinkedList<int> testList = LinkedList<int>();
+    LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
+    try
+    {
+        testList.vaciar();
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar vaciar la linked list: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+    testExitoso = testList.Longitud() != 0 ? false : testExitoso;
+    std::cout << "test_Vaciar... " << ( testExitoso ? "EXITOSO" : "FALLIDO ") << std::endl;
+    if(!testExitoso)
+        cout << "La del longitud del linked list es " << testList.Longitud() << " cuando deberia de ser 0" << std::endl;
     return testExitoso;
 }
 
@@ -208,7 +228,7 @@ int LinkedListTest::listaPushBackVector(LinkedList<int>& list, const vector<int>
     }
     catch(const exception& ex)
     {
-        std::cout << "Ocurrio una excepcion al intentar insertar los elementos al linked lsit: " << ex.what() << std::endl;
+        std::cout << "Ocurrio una excepcion al intentar insertar los elementos al linked list: " << ex.what() << std::endl;
     }
     return i;
 }

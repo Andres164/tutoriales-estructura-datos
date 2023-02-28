@@ -88,7 +88,7 @@
 	"Queue.h"
 	"Stack.h"
 
-1677215404 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
+1677560562 d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\linkedlist.h
 	<stdexcept>
 	"NodoLinkedList.h"
 
@@ -110,7 +110,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1677555425 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1677563373 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
