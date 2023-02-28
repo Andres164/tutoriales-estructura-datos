@@ -125,7 +125,7 @@ private:
     std::shared_ptr< NodoLinkedList<T> > getPtrIndex(int index)
     {
         if(index < 0 || index >= this->longitud)
-            throw std::out_of_range("El Index esta fuera del rango de la lista");
+            throw std::out_of_range("getPtrIndex: El Index esta fuera del rango de la lista");
         shared_ptr< NodoLinkedList<T> > nodoActual = this->raiz;
         for(int i = 1; i <= index; i++)
             nodoActual = nodoActual->getNodoSucesor();

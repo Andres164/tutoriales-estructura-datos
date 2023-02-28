@@ -102,35 +102,55 @@ bool LinkedListTest::test_pop_front()
 bool LinkedListTest::test_InsertarElemento()
 {
     bool testExitoso = true;
-    LinkedList<int> testList = LinkedList<int>();
-    std::cout << "This is befor crash" << std::endl;
+    LinkedList<int> testList = LinkedList<int>(LinkedListTest::setDeDatos.size());
     LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
-    std::cout << "This won't print 1" << std::endl;
-    int valorInsertado = 702;
+    int valorInsertadoAlInicio = 560, valorInsertadoAlMedio = 702;
     try
     {
-        std::cout << "mitad de la longitud: " << testList.Longitud()/2 << std::endl;
-        testList.insertarElemento(testList.Longitud()/2, valorInsertado);
+        testList.insertarElemento(0, valorInsertadoAlInicio);
+        testList.insertarElemento(testList.Longitud()/2, valorInsertadoAlMedio);
     }
     catch(const exception& ex)
     {
-        std::cout << "Ocurrio una excepcion al intentar insertar el elemento en el LinkedList: " << ex.what() << std::endl;
+        std::cout << "Ocurrio una excepcion al intentar insertar los elementos en el LinkedList: " << ex.what() << std::endl;
         testExitoso = false;
     }
-    std::cout << "This won't print 2" std::endl;
+    std::vector<int> setDatosModificado = std::vector<int>(LinkedListTest::setDeDatos.size());
     try
     {
-        std::vector<int> setDatosModificado = std::vector<int>();
         std::copy(LinkedListTest::setDeDatos.begin(), LinkedListTest::setDeDatos.end(), setDatosModificado.begin());
+        setDatosModificado.insert(setDatosModificado.begin(), valorInsertadoAlInicio);
         std::vector<int>::const_iterator itAlMedio = setDatosModificado.begin()+setDatosModificado.size()/2;
-        setDatosModificado.insert(itAlMedio, valorInsertado);
+        setDatosModificado.insert(itAlMedio, valorInsertadoAlMedio);
+
     }
     catch(const exception& ex)
     {
-        std::cout << "Ocurrio una excepcion al intentar crear el nuevo set de datos con el nuevo elemento: " << ex.what() << std::endl;
+        std::cout << "Ocurrio una excepcion al intentar crear el nuevo set de datos con los nuevos elementos: " << ex.what() << std::endl;
+        testExitoso = false;
     }
-    std::cout << "This won't print 3";
-    //std::cout << "Elemento en el Medio: " << setDatosModificado[setDatosModificado.size()/2] << std::endl;
+    bool seEncuentraValorAlInicio, seEncuentraValorAlMedio, seEncontraronTodosLosElementos;
+    try
+    {
+        seEncuentraValorAlInicio = testList.elementoEnIndex(0) == valorInsertadoAlInicio;
+        seEncuentraValorAlMedio = testList.elementoEnIndex(testList.Longitud()/2) == valorInsertadoAlMedio;
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar verificar que los elementos fueron insertados: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+    try
+    {
+        seEncontraronTodosLosElementos = LinkedListTest::contienenLosMismosElementos(testList, setDatosModificado);
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar verificar todos los elementos que deben estar en la lista existan: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+
+    std::cout << "Elemento en el Medio: " << setDatosModificado[setDatosModificado.size()/2] << std::endl;
     return testExitoso;
 }
 
