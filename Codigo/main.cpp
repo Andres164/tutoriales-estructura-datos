@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    cout << LinkedListTest::test_Vaciar() << endl;
+    cout << LinkedListTest::test_EliminarElemento() << endl;
 
     return 0;
 }

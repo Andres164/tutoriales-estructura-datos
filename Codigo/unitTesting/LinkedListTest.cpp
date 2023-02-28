@@ -122,7 +122,6 @@ bool LinkedListTest::test_InsertarElemento()
         setDatosModificado.insert(setDatosModificado.begin(), valorInsertadoAlInicio);
         std::vector<int>::const_iterator itAlMedio = setDatosModificado.begin()+setDatosModificado.size()/2;
         setDatosModificado.insert(itAlMedio, valorInsertadoAlMedio);
-
     }
     catch(const exception& ex)
     {
@@ -163,7 +162,61 @@ bool LinkedListTest::test_InsertarElemento()
 bool LinkedListTest::test_EliminarElemento()
 {
     bool testExitoso = true;
-
+    LinkedList<int> testList = LinkedList<int>();
+    LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
+    int primerValorEliminado = LinkedListTest::setDeDatos[0],
+        segundoValorEliminado = LinkedListTest::setDeDatos[LinkedListTest::setDeDatos.size()/2];
+    try
+    {
+        testList.eliminarElemento(primerValorEliminado);
+        testList.eliminarElemento(segundoValorEliminado);
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar eliminar los elementos del linked test: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+    std::vector<int> setDatosModificado = std::vector<int>(LinkedListTest::setDeDatos.size());
+    try
+    {
+        std::copy(LinkedListTest::setDeDatos.begin(), LinkedListTest::setDeDatos.end(), setDatosModificado.begin());
+        setDatosModificado.erase(setDatosModificado.begin());
+        std::vector<int>::const_iterator itAlMedio = setDatosModificado.begin() + LinkedListTest::setDeDatos.size()/2;
+        setDatosModificado.erase(itAlMedio);
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar crear y modificar el nuevo set de datos: " << ex.what() << std::endl;
+        testExitoso = false;
+    }
+    bool seEliminoValorAlInicio = 0, seEliminoValorAlMedio = 0, seEncontraronTodosLosElementos = 0;
+    try
+    {
+        seEliminoValorAlInicio = testList.elementoEnIndex(0) == primerValorEliminado;
+        seEliminoValorAlMedio = testList.elementoEnIndex(testList.Longitud()/2) == segundoValorEliminado;
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar verificar que los elementos fueran eliminados: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+    try
+    {
+        seEncontraronTodosLosElementos = LinkedListTest::contienenLosMismosElementos(testList, setDatosModificado);
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar verificar todos los elementos que deben estar en la lista existan: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+    testExitoso = ( !seEliminoValorAlInicio || !seEliminoValorAlMedio || !seEncontraronTodosLosElementos ? false : testExitoso );
+    std::cout << "test_EliminarElemento... " << ( testExitoso ? "EXITOSO" : "FALLIDO" ) << std::endl;
+    if(!testExitoso)
+    {
+        std::cout << "Se elimino el valor insertado al inicio del LinkedList... " << ( seEliminoValorAlInicio ? "SI" : "NO" ) << std::endl;
+        std::cout << "Se elimino el valor insertado al medio del LinkedList... " << ( seEliminoValorAlMedio ? "SI" : "NO" ) << std::endl;
+        std::cout << "Todos los elementos estan en orden... " << ( seEncontraronTodosLosElementos ? "SI" : "NO" ) << std::endl;
+    }
     return testExitoso;
 }
 
