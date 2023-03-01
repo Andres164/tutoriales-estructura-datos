@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    cout << LinkedListTest::test_EliminarElemento() << endl;
+    cout << LinkedListTest::test_EliminarEnIndex() << endl;
 
     return 0;
 }
