@@ -284,15 +284,54 @@ bool LinkedListTest::test_EliminarEnIndex()
 
 bool LinkedListTest::test_elementoEnIndex()
 {
-    bool testExitoso = true;
-
+    LinkedList<int> testList = LinkedList<int>();
+    LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
+    bool testExitoso = LinkedListTest::contienenLosMismosElementos(testList, LinkedListTest::setDeDatos);
+    std::cout << "test_elementoEnIndex... " << ( testExitoso ? "EXITOSO" : "FALLIDO" ) << std::endl;
     return testExitoso;
 }
 
 bool LinkedListTest::test_EstaVacia()
 {
-    bool testExitoso = true;
-
+    bool testExitoso;
+    LinkedList<int> testList = LinkedList<int>();
+    try
+    {
+        testList.push_back(2);
+        testList.push_back(4);
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar insertar los elementos al linked list: " << ex.what() << std::endl;
+    }
+    try
+    {
+        testExitoso = !testList.estaVacia();
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar ejecutar testList.estaVacia() : " << ex.what() << std::endl;
+        testExitoso = false;
+    }
+    try
+    {
+        testList.eliminarEnIndex(0);
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar eliminar el primer elemento : " << ex.what() << std::endl;
+    }
+    try
+    {
+        testExitoso = testList.estaVacia() ? false : testExitoso;
+        testList.eliminarEnIndex(0);
+        testExitoso = !testList.estaVacia() ? false : testExitoso;
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar eliminar el primer elemento y verificar que testList este vacia: " << ex.what() << std::endl;
+    }
+    std::cout << "test_EstaVacia... " << ( testExitoso ? "EXITOSO" : "FALLIDO" ) << std::endl;
     return testExitoso;
 }
 

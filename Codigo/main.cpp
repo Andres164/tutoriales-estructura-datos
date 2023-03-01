@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    cout << LinkedListTest::test_EliminarEnIndex() << endl;
+    cout << LinkedListTest::test_EstaVacia() << endl;
 
     return 0;
 }
