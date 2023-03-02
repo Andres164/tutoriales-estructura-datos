@@ -359,7 +359,40 @@ bool LinkedListTest::test_Vaciar()
 bool LinkedListTest::test_Longitud()
 {
     bool testExitoso = true;
-
+    LinkedList<int> testList = LinkedList<int>();
+    LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
+    try
+    {
+        testExitoso = ( testList.Longitud() == LinkedListTest::setDeDatos.size() );
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar obtener la longitud del linked list: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+    try
+    {
+        testList.eliminarEnIndex(0);
+        testExitoso = ( testList.Longitud() != LinkedListTest::setDeDatos.size() -1 ? false : testExitoso );
+        testList.eliminarEnIndex(testList.Longitud()/2);
+        testExitoso = ( testList.Longitud() != LinkedListTest::setDeDatos.size() -2 ? false : testExitoso );
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar eliminar elementos y obtener la longitud del linked list: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+    try
+    {
+        testList.vaciar();
+        testExitoso = ( testList.Longitud() != 0 ? false : testExitoso );
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar vaciar y obtener la longitud del linked list: " <<  ex.what() << std::endl;
+        testExitoso = false;
+    }
+    std::cout << "test_Longitud... " << ( testExitoso ? "EXITOSO" : "FALLIDO ") << std::endl;
     return testExitoso;
 }
 
