@@ -18,9 +18,11 @@ class LinkedListTest
         static bool test_EstaVacia();
         static bool test_Vaciar();
         static bool test_Longitud();
+        static void test_TodosLosMetodos();
 
     private:
         static int listaPushBackVector(LinkedList<int>&, const vector<int>&);
         static int listaPushFrontVector(LinkedList<int>&, const vector<int>&);
+        static void vectorPushBackList(const vector<int>&, LinkedList<int>&);
         static bool contienenLosMismosElementos(LinkedList<int>&, const vector<int>&);
 };

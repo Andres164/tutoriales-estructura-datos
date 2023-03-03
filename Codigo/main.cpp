@@ -15,7 +15,8 @@ using namespace std;
 
 int main()
 {
-    cout << LinkedListTest::test_Longitud() << endl;
+    LinkedListTest::test_TodosLosMetodos();
+    //cout << LinkedListTest::test_TodosLosMetodos() << endl;
 
     return 0;
 }

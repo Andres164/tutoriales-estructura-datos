@@ -1,14 +1,12 @@
 #include <iostream>
 #include <exception>
 #include "LinkedListTest.h"
-#include "../algoritmosEstructurasDatos/manejoEstructuraDatos.h"
 
 const vector<int> LinkedListTest::setDeDatos = { -20, 10, -1586, -2,147,483,648, 12, 10, -20, 789, 2,147,483,647, 0, 81, 39, -69 };
 
 
 bool LinkedListTest::test_push_back()
 {
-    std::cout << "--------------------------- test_push_back ---------------------------\n\n";
     bool testExitoso = true;
     LinkedList<int> testList = LinkedList<int>();
     unsigned int elementosInsertados = listaPushBackVector(testList, LinkedListTest::setDeDatos);
@@ -16,13 +14,13 @@ bool LinkedListTest::test_push_back()
     testExitoso = contienenLosMismosElementos(testList, LinkedListTest::setDeDatos);
     std::cout << "El linked list contiene los elementos insertados? " << (testExitoso ? "SI" : "NO") << std::endl;
     testExitoso = elementosInsertados != LinkedListTest::setDeDatos.size() ? false : testExitoso;
-    std::cout << "test_push_back... " << ( testExitoso ? "Exitoso" : "Fallido" ) << std::endl;
+    std::cout << "test_push_back... " << ( testExitoso ? "EXITOSO" : "FALLIDO" ) << std::endl;
+    std::cout << "---------------------------  ---------------------------\n\n";
     return testExitoso;
 }
 
 bool LinkedListTest::test_push_front()
 {
-    std::cout << "--------------------------- test_push_front ---------------------------\n\n";
     LinkedList<int> testList = LinkedList<int>();
     unsigned int elementosInsertados = listaPushFrontVector(testList, LinkedListTest::setDeDatos);
     std::cout << "Elementos insertados... " << elementosInsertados << "/" << LinkedListTest::setDeDatos.size() << std::endl;
@@ -40,7 +38,9 @@ bool LinkedListTest::test_push_front()
     bool testExitoso = contienenLosMismosElementos;
     std::cout << "El linked list contiene los elementos insertados? " << (testExitoso ? "SI" : "NO") << std::endl;
     testExitoso = elementosInsertados != LinkedListTest::setDeDatos.size() ? false : testExitoso;
-    std::cout << "test_push_front... " << ( testExitoso ? "Exitoso" : "Fallido" ) << std::endl;
+    std::cout << "test_push_front... " << ( testExitoso ? "EXITOSO" : "FALLIDO" ) << std::endl;
+        std::cout << "---------------------------  ---------------------------\n\n";
+
     return testExitoso;
 }
 
@@ -69,7 +69,9 @@ bool LinkedListTest::test_pop_back()
     std::cout << "Elementos eliminados... " << elementosEliminados << "/" << mitadSetDeDatos.size() << std::endl;
 
     testExitoso = ( !LinkedListTest::contienenLosMismosElementos(testList, mitadSetDeDatos) ? false : testExitoso ) ;
-    std::cout << "test_pop_back... " << ( testExitoso ? "Exitoso" : "Fallido" ) << std::endl;
+    std::cout << "test_pop_back... " << ( testExitoso ? "EXITOSO" : "FALLIDO" ) << std::endl;
+    std::cout << "---------------------------  ---------------------------\n\n";
+
     return testExitoso;
 }
 
@@ -93,9 +95,9 @@ bool LinkedListTest::test_pop_front()
         testExitoso = false;
     }
     std::cout << "Elementos eliminados... " << elementosEliminados << "/" << mitadSetDeDatos.size() << std::endl;
-    manejoEstructuraDatos::imprimirLinkedList(testList);
     testExitoso = ( !LinkedListTest::contienenLosMismosElementos(testList, mitadSetDeDatos) ? false : testExitoso ) ;
-    std::cout << "test_pop_front... " << ( testExitoso ? "Exitoso" : "Fallido" ) << std::endl;
+    std::cout << "test_pop_front... " << ( testExitoso ? "EXITOSO" : "FALLIDO" ) << std::endl;
+    std::cout << "---------------------------  ---------------------------\n\n";
     return testExitoso;
 }
 
@@ -164,12 +166,12 @@ bool LinkedListTest::test_EliminarElemento()
     bool testExitoso = true;
     LinkedList<int> testList = LinkedList<int>();
     LinkedListTest::listaPushBackVector(testList, LinkedListTest::setDeDatos);
-    int primerValorEliminado = LinkedListTest::setDeDatos[0],
+    int primerValorEliminado = testList.elementoEnIndex(0),
         segundoValorEliminado;
     try
     {
         testList.eliminarElemento(primerValorEliminado);
-        segundoValorEliminado = LinkedListTest::setDeDatos[LinkedListTest::setDeDatos.size()/2 +1];
+        segundoValorEliminado = testList.elementoEnIndex(testList.Longitud()/2);
         testList.eliminarElemento(segundoValorEliminado);
     }
     catch(const exception& ex)
@@ -396,6 +398,21 @@ bool LinkedListTest::test_Longitud()
     return testExitoso;
 }
 
+void LinkedListTest::test_TodosLosMetodos()
+{
+    test_push_back();
+    test_push_front();
+    test_pop_back();
+    test_pop_front();
+    test_InsertarElemento();
+    test_EliminarElemento();
+    test_EliminarEnIndex();
+    test_elementoEnIndex();
+    test_EstaVacia();
+    test_Vaciar();
+    test_Longitud();
+}
+
 
 // PRIVATE
 int LinkedListTest::listaPushBackVector(LinkedList<int>& list, const vector<int>& vector)
@@ -427,6 +444,10 @@ int LinkedListTest::listaPushFrontVector(LinkedList<int>& list, const vector<int
     }
     return i;
 }
+void LinkedListTest::vectorPushBackList(const vector<int>& vector, LinkedList<int>& list)
+{
+
+}
 
 bool LinkedListTest::contienenLosMismosElementos(LinkedList<int>& list, const vector<int>& vector)
 {
@@ -443,5 +464,6 @@ bool LinkedListTest::contienenLosMismosElementos(LinkedList<int>& list, const ve
     }
     return contienenLosMismosElementos;
 }
+
 
 
