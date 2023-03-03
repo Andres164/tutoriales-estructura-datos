@@ -23,6 +23,6 @@ class LinkedListTest
     private:
         static int listaPushBackVector(LinkedList<int>&, const vector<int>&);
         static int listaPushFrontVector(LinkedList<int>&, const vector<int>&);
-        static void vectorPushBackList(const vector<int>&, LinkedList<int>&);
+        static void vectorPushBackList(vector<int>&, LinkedList<int>&);
         static bool contienenLosMismosElementos(LinkedList<int>&, const vector<int>&);
 };

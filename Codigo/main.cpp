@@ -15,8 +15,8 @@ using namespace std;
 
 int main()
 {
-    LinkedListTest::test_TodosLosMetodos();
-    //cout << LinkedListTest::test_TodosLosMetodos() << endl;
+    //LinkedListTest::test_TodosLosMetodos();
+    cout << LinkedListTest::test_EliminarElemento() << endl;
 
     return 0;
 }

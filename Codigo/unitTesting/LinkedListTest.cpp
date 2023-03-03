@@ -2,7 +2,7 @@
 #include <exception>
 #include "LinkedListTest.h"
 
-const vector<int> LinkedListTest::setDeDatos = { -20, 10, -1586, -2,147,483,648, 12, 10, -20, 789, 2,147,483,647, 0, 81, 39, -69 };
+const vector<int> LinkedListTest::setDeDatos = { -20, 10, -1586, -2,147,483,648, 12, 10, -200, 789, 2,147,483,647, 0, 81, 39, -69 };
 
 
 bool LinkedListTest::test_push_back()
@@ -179,19 +179,9 @@ bool LinkedListTest::test_EliminarElemento()
         std::cout << "Ocurrio una excepcion al intentar eliminar los elementos del linked test: " <<  ex.what() << std::endl;
         testExitoso = false;
     }
-    std::vector<int> setDatosModificado = std::vector<int>(LinkedListTest::setDeDatos.size());
-    try
-    {
-        std::copy(LinkedListTest::setDeDatos.begin(), LinkedListTest::setDeDatos.end(), setDatosModificado.begin());
-        setDatosModificado.erase(setDatosModificado.begin());
-        std::vector<int>::const_iterator itAlMedio = setDatosModificado.begin() + setDatosModificado.size()/2;
-        setDatosModificado.erase(itAlMedio);
-    }
-    catch(const exception& ex)
-    {
-        std::cout << "Ocurrio una excepcion al intentar crear y modificar el nuevo set de datos: " << ex.what() << std::endl;
-        testExitoso = false;
-    }
+    std::vector<int> setDatosModificado = std::vector<int>();
+    LinkedListTest::vectorPushBackList(setDatosModificado, testList);
+
     bool seEliminoValorAlInicio = 0, seEliminoValorAlMedio = 0, seEncontraronTodosLosElementos = 0;
     try
     {
@@ -444,9 +434,17 @@ int LinkedListTest::listaPushFrontVector(LinkedList<int>& list, const vector<int
     }
     return i;
 }
-void LinkedListTest::vectorPushBackList(const vector<int>& vector, LinkedList<int>& list)
+void LinkedListTest::vectorPushBackList(vector<int>& vector, LinkedList<int>& list)
 {
-
+    try
+    {
+        for(int i = 0; i < list.Longitud(); i++)
+            vector.push_back(list.elementoEnIndex(i));
+    }
+    catch(const exception& ex)
+    {
+        std::cout << "Ocurrio una excepcion al intentar insertar los elementos al vector: " << ex.what() << std::endl;
+    }
 }
 
 bool LinkedListTest::contienenLosMismosElementos(LinkedList<int>& list, const vector<int>& vector)
