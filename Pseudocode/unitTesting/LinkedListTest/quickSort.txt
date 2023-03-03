@@ -1,0 +1,23 @@
+if( lenght < 2 )
+	return
+index middle
+swap middle and last
+pivot = array[length-1]
+
+leftElement = array[0]
+rightElement = pivot -1
+
+while( leftElement < rightElement )
+	if( *leftElement <= *pivot )
+		leftElement++
+	if( *rightElement >= *pivot )
+		rightElement--
+	if( *leftElement > *pivot && *rightElement < *pivot )
+		swap( leftElement, rightElement )
+if( *leftElement > *pivot )
+	swap( leftElement, pivot )
+
+leftSubArray = array
+rigthSubArray = leftElement+1
+quicksort( leftSubArray, length/2 )
+quicksort( rightSubArray, ceil(length/2) -1 )

@@ -66,16 +66,17 @@
 
 1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
-1675363076 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1677866190 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
+	<math.h>
 	"algoritmosAcomodo.h"
 	"manejoArreglos.h"
 
 1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
 
-1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
+1677865208 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
-1675363001 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
+1677865181 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
 	<iostream>
 	"manejoArreglos.h"
 
@@ -110,7 +111,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1677818121 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1677866381 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -119,6 +120,8 @@
 	"Stack.h"
 	"BinarySearchTree.h"
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
+	"algoritmosEstructurasDatos/algoritmosAcomodo.h"
+	"algoritmosEstructurasDatos/manejoArreglos.h"
 	"QueueTest.h"
 	"StackTest.h"
 	"BinarySearchTreeTest.h"

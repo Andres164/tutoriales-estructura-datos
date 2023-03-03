@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 #include "algoritmosAcomodo.h"
 #include "manejoArreglos.h"
 
@@ -74,8 +75,28 @@ namespace algoritmosAcomodo
             arregloUnido[i+j] = arreglo2[j];
         return arregloUnido;
     }
-    void quickSort()
+    void quickSort(int arreglo[], int longitud)
     {
-
+        if(longitud < 2)
+            return;
+        manejoArreglos::intercambiarElementos(arreglo, longitud/2, longitud-1);
+        int* pivote = arreglo + (longitud-1),
+             *elementoIzquierdo = arreglo,
+             *elementoDerecho = pivote-1;
+        while( elementoIzquierdo < elementoDerecho)
+        {
+            if(*elementoIzquierdo <= *pivote)
+                elementoIzquierdo++;
+            if(*elementoDerecho >= *pivote)
+                elementoDerecho--;
+            if( *elementoIzquierdo > *pivote && *elementoDerecho < *pivote )
+                manejoArreglos::intercambiarElementos(elementoIzquierdo, elementoDerecho);
+        }
+        if( *elementoIzquierdo > *pivote )
+            manejoArreglos::intercambiarElementos(elementoIzquierdo, pivote);
+        int* subArregloIzquierdo = &arreglo[0],
+             *subArregloDerecho = elementoIzquierdo+1;
+        quickSort( subArregloIzquierdo, longitud/2 );
+        quickSort( subArregloDerecho, ceil(longitud/2) -1 );
     }
 }

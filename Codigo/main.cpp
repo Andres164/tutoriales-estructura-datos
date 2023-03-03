@@ -6,6 +6,8 @@
 #include "Stack.h"
 #include "BinarySearchTree.h"
 #include "algoritmosEstructurasDatos/manejoEstructuraDatos.h"
+#include "algoritmosEstructurasDatos/algoritmosAcomodo.h"
+#include "algoritmosEstructurasDatos/manejoArreglos.h"
 #include "QueueTest.h"
 #include "StackTest.h"
 #include "BinarySearchTreeTest.h"
@@ -16,7 +18,11 @@ using namespace std;
 int main()
 {
     //LinkedListTest::test_TodosLosMetodos();
-    cout << LinkedListTest::test_EliminarElemento() << endl;
+    //cout << LinkedListTest::test_EliminarElemento() << endl;
+
+    int arreglo[] = {2, 1, 4, 5, 3, 6};
+    algoritmosAcomodo::quickSort(arreglo, 6);
+    manejoArreglos::imprimirArreglo(arreglo, 6);
 
     return 0;
 }

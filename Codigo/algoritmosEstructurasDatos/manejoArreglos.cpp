@@ -9,6 +9,14 @@ namespace manejoArreglos
         arreglo[index1] = arreglo[index2];
         arreglo[index2] = elemento1;
     }
+
+    void intercambiarElementos(int* elemento1, int* elemento2)
+    {
+        int temp = *elemento1;
+        *elemento1 = *elemento2;
+        *elemento2 = temp;
+    }
+
     void imprimirArreglo(int arreglo[], int numElementos)
     {
         for(int i = 0; i < numElementos; i++)
