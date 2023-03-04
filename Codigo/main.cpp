@@ -20,7 +20,7 @@ int main()
     //LinkedListTest::test_TodosLosMetodos();
     //cout << LinkedListTest::test_EliminarElemento() << endl;
 
-    int arreglo[] = {2, 1, 4, 5, 3, 6};
+    int arreglo[] = {5, 3, 2, 4, 6, 1};
     algoritmosAcomodo::quickSort(arreglo, 6);
     manejoArreglos::imprimirArreglo(arreglo, 6);
 

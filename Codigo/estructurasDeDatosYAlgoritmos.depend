@@ -1,14 +1,15 @@
 # depslib dependency file v1.0
-1675535273 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1677910987 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
+	<math.h>
 	"algoritmosAcomodo.h"
 	"manejoArreglos.h"
 
 1675535273 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
 
-1675535273 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.h
+1677906518 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
-1675535273 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
+1677906518 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
 	<iostream>
 	"manejoArreglos.h"
 
@@ -16,7 +17,7 @@
 	<stdexcept>
 	"LinkedList.h"
 
-1677388369 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
+1677906518 d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.h
 	<stdexcept>
 	"NodoLinkedList.h"
 
@@ -50,7 +51,7 @@
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1677390009 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1677911101 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -59,6 +60,8 @@
 	"Stack.h"
 	"BinarySearchTree.h"
 	"algoritmosEstructurasDatos/manejoEstructuraDatos.h"
+	"algoritmosEstructurasDatos/algoritmosAcomodo.h"
+	"algoritmosEstructurasDatos/manejoArreglos.h"
 	"QueueTest.h"
 	"StackTest.h"
 	"BinarySearchTreeTest.h"
@@ -242,7 +245,12 @@
 	<exception>
 	"LinkedListTest.h"
 
-1677388369 d:\repositorios\tutorias-data-structures\codigo\unittesting\linkedlisttest.h
+1677906518 d:\repositorios\tutorias-data-structures\codigo\unittesting\linkedlisttest.h
 	<vector>
 	"LinkedList.h"
+
+1677906518 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\linkedlisttest.cpp
+	<iostream>
+	<exception>
+	"LinkedListTest.h"
 
