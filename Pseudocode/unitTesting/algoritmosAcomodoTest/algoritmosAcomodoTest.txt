@@ -1,0 +1,34 @@
+1- enums con los algoritmos de acomodo existentes
+
+2- bool test_AlgoritmoAcomodo(AlgoritmosAcomodo algoritmoAcomodo, int longiutdSetDeDatos)
+  numeroArreglosMalAcomodados = 0;
+  numeroArreglosBienAcomodados = 0;
+try:
+  while( numeroArreglosMalAcomodados < 6 && numeroArreglosBienAcomodados < 100 )
+	setDeDatos = generarSetDatosAleatorio(longitudSetDeDatos)
+	acomodarArregloCon(setDeDatos, algoritmoAcomodo)
+	if( estaElArregloAcomodadoMenorAMayor(setDeDatos) )
+		numeroArreglosBienAcomodados++
+	else
+		numeroArreglosMalAcomodados++
+		manejoArreglos::imprimirArreglo(setDeDatos, longitudSetDeDatos)
+catch 
+  print "Ocurrio una excepcion "+ ex.what +" Numero de arreglos bien acomodados: " + numeroArreglosBienAcomodados + endl
+
+  testExitoso = numeroArreglosMalAcomodados == 0 && numeroArreglosBienAcomodados >= 1
+  print "test_AlgoritmoAcomodo... " + ( testExitoso ? "EXITOSO" : "FALLIDO" ) + endl
+  print "Numero de arreglos mal acomodados... " + numeroArreglosMalAcomodados + endl
+  return testExitoso
+ 
+
+3- int* generarSetDatosAleatorio(int longitud)
+  int setDeDatos[longitud]
+  for( i = 0; i < longitud; i++ )
+	setDeDatos[i] = randint()
+  return &setDeDatos[0]
+			
+
+4- bool estaElArregloAcomodadoMenorAMayor()
+  
+
+5- void acomodarArregloCon(int arreglo[], AlgoritmosAcomodo algoritmo)
