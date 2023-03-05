@@ -5,30 +5,47 @@
   numeroArreglosBienAcomodados = 0;
 try:
   while( numeroArreglosMalAcomodados < 6 && numeroArreglosBienAcomodados < 100 )
-	setDeDatos = generarSetDatosAleatorio(longitudSetDeDatos)
-	acomodarArregloCon(setDeDatos, algoritmoAcomodo)
+	setDeDatos[longiutdSetDeDatos]
+	llenarSetDatosConValoresRandom(setDeDatos, longitudSetDeDatos)
+	acomodarArregloCon(setDeDatos, longitudSetDeDatos, algoritmoAcomodo)
 	if( estaElArregloAcomodadoMenorAMayor(setDeDatos) )
 		numeroArreglosBienAcomodados++
 	else
 		numeroArreglosMalAcomodados++
 		manejoArreglos::imprimirArreglo(setDeDatos, longitudSetDeDatos)
 catch 
-  print "Ocurrio una excepcion "+ ex.what +" Numero de arreglos bien acomodados: " + numeroArreglosBienAcomodados + endl
+  print "Ocurrio una excepcion "+ ex.what + endl
 
   testExitoso = numeroArreglosMalAcomodados == 0 && numeroArreglosBienAcomodados >= 1
   print "test_AlgoritmoAcomodo... " + ( testExitoso ? "EXITOSO" : "FALLIDO" ) + endl
+  print "Numero de arreglos bien acomodados... " + numeroArreglosBienAcomodados + endl
   print "Numero de arreglos mal acomodados... " + numeroArreglosMalAcomodados + endl
   return testExitoso
  
 
-3- int* generarSetDatosAleatorio(int longitud)
-  int setDeDatos[longitud]
+3- void llenarSetDatosConValoresRandom(int arreglo[], int longitud)
+try
   for( i = 0; i < longitud; i++ )
-	setDeDatos[i] = randint()
-  return &setDeDatos[0]
-			
+	arreglo[i] = randint()
+catch print "Ocurrio una excepcion al intentar llenar el set de datos" + ex.what + endl
 
-4- bool estaElArregloAcomodadoMenorAMayor()
-  
+4- bool estaElArregloAcomodadoMenorAMayor(int arreglo[], int longitud)
+try 
+  for( i = 1; i < longitud; i++ )
+	if arreglo[i -1] > arreglo[i]
+		return false
+  return true
+catch print "Ocurrio una excepcion al intentar verificar que el arreglo estubiera acomodado: " + ex.what + endl
 
-5- void acomodarArregloCon(int arreglo[], AlgoritmosAcomodo algoritmo)
+5- void acomodarArregloCon(int arreglo[], int longitud, AlgoritmosAcomodo algoritmo)
+try
+  switch algoritmo
+  case selectionSort:
+	selectionSort(arreglo, longitud)
+  case insertionSort:
+	insertionSort(arreglo, longitud)
+  case mergeSort:
+	mergeSort(arreglo, longitud)
+  case quickSort:
+	quickSort(arreglo, longitud)
+catch print "Ocurrio una excepcion al intentar acomodar el arreglo: " + ex.what + endl
