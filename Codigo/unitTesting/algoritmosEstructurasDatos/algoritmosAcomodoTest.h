@@ -2,7 +2,7 @@
 
 namespace algoritmosAcomodoTest
 {
-    enum class AlgoritmosDeAcomodo = { InsertionSort, SelectionSort, MergeSort, QuickSort };
+    enum class AlgoritmosDeAcomodo { InsertionSort, SelectionSort, MergeSort, QuickSort };
     bool test_AlgoritmoAcomodo(AlgoritmosDeAcomodo algoritmoAcomodo, int longiutdSetDeDatos);
     void llenarSetDatosConValoresRandom(int arreglo[], int longitud);
     bool estaElArregloAcomodadoMenorAMayor(int arreglo[], int longitud);
