@@ -64,8 +64,13 @@
 		<Unit filename="unitTesting/QueueTest.h" />
 		<Unit filename="unitTesting/StackTest.cpp" />
 		<Unit filename="unitTesting/StackTest.h" />
+		<Unit filename="unitTesting/algoritmosEstructurasDatos/algoritmosAcomodoTest.cpp" />
+		<Unit filename="unitTesting/algoritmosEstructurasDatos/algoritmosAcomodoTest.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
+			<code_completion />
+			<envvars />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

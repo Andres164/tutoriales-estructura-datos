@@ -18,6 +18,7 @@ namespace algoritmosAcomodo
             manejoArreglos::intercambiarElementos(arreglo, i, indexElementoMenor);
         }
     }
+
     void insertionSort(int arreglo[], int numElementos)
     {
         for(int i = 1; i < numElementos; i++)
@@ -32,6 +33,7 @@ namespace algoritmosAcomodo
             }
         }
     }
+
     void mergeSort(int arreglo[], int numElementos)
     {
         int numElementosIzquierda = 1, numElementosDerecha = 1;
@@ -51,6 +53,7 @@ namespace algoritmosAcomodo
         }
 
     }
+
     int* unirArreglosAcomodados(int arreglo1[], int numElementosArr1, int arreglo2[], int numElementosArr2)
     {
         int numElementos = numElementosArr1 + numElementosArr2;
