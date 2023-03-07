@@ -1,0 +1,11 @@
+binaryInsert( int array[], int longitud, int nuevoElemento)
+If( longitud < 2 )
+  posicionCorrecta = ( nuevoElemento < array[0] ? array : array +1 )
+  *posicionCorrecta = nuevoElemento
+
+IndexAlMedio = longitud / 2
+If( nuevoElemento < arr[indexAlMedio] )
+   binaryInsert(arr, long/2, nuevoElem)
+Else
+   SubArray = array + long/2 +1
+   binaryInsert(subArr, ceil(long/2)-1, nuevoElem)

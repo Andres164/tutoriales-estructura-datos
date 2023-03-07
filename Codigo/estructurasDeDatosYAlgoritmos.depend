@@ -69,7 +69,7 @@
 
 1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
-1677866190 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1678157993 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
 	<math.h>
 	"algoritmosAcomodo.h"
@@ -77,10 +77,11 @@
 
 1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
 
-1677865208 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
+1678168385 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
-1677865181 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
+1678170047 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
 	<iostream>
+	<math.h>
 	"manejoArreglos.h"
 
 1676438245 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
@@ -114,7 +115,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1677866381 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1678169855 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -253,4 +254,14 @@
 	<iostream>
 	<exception>
 	"LinkedListTest.h"
+
+1678157993 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
+	<iostream>
+	<exception>
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	"algoritmosEstructurasDatos/algoritmosAcomodoTest.h"
+
+1678157993 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
 

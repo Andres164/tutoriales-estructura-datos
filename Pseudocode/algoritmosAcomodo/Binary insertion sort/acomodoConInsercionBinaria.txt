@@ -1,12 +1,10 @@
-ptr_posicionCorrecta( int array[], int longitud, int nuevoElemento )
+ptr_posicionCorrecta( int array[], int longitud, int nuevoElemento)
 If( longitud < 2 )
-  Posición correcta = 
-  Return
+  return ( nuevoElemento < array[0] ? array : array +1 )
 
 IndexAlMedio = longitud / 2
 If( nuevoElemento < arr[indexAlMedio] )
-    
-   BinaryInsertion(arr, long/2, nuevoElem)
+   ptr_posicionCorrecta(arr, long/2, nuevoElem)
 Else
    SubArray = array + long/2 +1
    ptr_posicionCorrecta(sunArr, ceil(long/2)-1, nuevoElem)

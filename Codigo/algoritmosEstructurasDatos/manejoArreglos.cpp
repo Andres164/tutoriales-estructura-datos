@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 #include "manejoArreglos.h"
 
 namespace manejoArreglos
@@ -26,5 +27,36 @@ namespace manejoArreglos
     {
         for(int i = 0; i < numElementosACopiar; i++)
             destino[i] = origen[i];
+    }
+
+    void binaryInsert(int arreglo[], int longitud, int nuevoElemento)
+    {
+        try
+        {
+            if( longitud < 1)
+            {
+                *(arreglo-1) = nuevoElemento;
+                return;
+            }
+            if( longitud < 2 )
+            {
+                int* posicionCorrecta = ( nuevoElemento < arreglo[0] ? arreglo : arreglo +1 );
+                *posicionCorrecta = nuevoElemento;
+                return;
+            }
+
+            int indexAlMedio = longitud/2;
+            if( nuevoElemento < arreglo[indexAlMedio] )
+                binaryInsert(arreglo, longitud/2, nuevoElemento);
+            else
+            {
+                int* subArreglo = arreglo + longitud/2 +1;
+                binaryInsert(subArreglo, std::ceil( longitud/2 -1 ), nuevoElemento);
+            }
+        }
+        catch(const std::exception& ex)
+        {
+            std::cout << "Ocurrio una excepcion al intentar insertar el elemento: " << ex.what() << std::endl;
+        }
     }
 }
