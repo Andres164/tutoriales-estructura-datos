@@ -1,10 +1,19 @@
 ptr_posicionCorrecta( int array[], int longitud, int nuevoElemento)
-If( longitud < 2 )
+if( longitud < 2 )
   return ( nuevoElemento < array[0] ? array : array +1 )
 
-IndexAlMedio = longitud / 2
-If( nuevoElemento < arr[indexAlMedio] )
-   ptr_posicionCorrecta(arr, long/2, nuevoElem)
-Else
-   SubArray = array + long/2 +1
-   ptr_posicionCorrecta(sunArr, ceil(long/2)-1, nuevoElem)
+indexAlMedio = longitud / 2
+if( nuevoElemento < arr[indexAlMedio] )
+   ptr_posicionCorrecta(arr, long/2, nuevoElemento)
+else
+   subArray = array + long/2 +1
+   ptr_posicionCorrecta(subArray, ceil(longitud/2)-1, nuevoElemento)
+
+
+binaryInsertionSort( int arreglo[], int longitud )
+for(int i = 1; i < longitud; i++)
+	int* ptr_elementoActual = &array[i]
+	int* ptr_posicionCorrecta = ptr_posicionCorrecta(arreglo, i-1, *ptr_elementoActual)
+	while(ptr_elementoActual != ptr_posicionCorrecta)
+		intercambiar(ptr_elementoActual, ptr_elementoActual -1)
+		ptr_elementoActual--

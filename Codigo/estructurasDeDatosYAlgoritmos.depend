@@ -69,13 +69,13 @@
 
 1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
-1678157993 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1678214819 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
 	<math.h>
 	"algoritmosAcomodo.h"
 	"manejoArreglos.h"
 
-1675363066 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
+1678214819 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
 
 1678168385 d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
@@ -115,7 +115,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1678169855 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1678214967 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>

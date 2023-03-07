@@ -7,4 +7,6 @@ namespace algoritmosAcomodo
     void mergeSort(int[], int);
     int* unirArreglosAcomodados(int[], int, int[], int);
     void quickSort(int[], int);
+    int* ptr_posicionCorrecta(int[], int, int);
+    void binaryInsertionSort( int[], int);
 }
