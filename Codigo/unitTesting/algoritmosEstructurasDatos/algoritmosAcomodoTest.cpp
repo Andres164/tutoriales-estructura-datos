@@ -16,11 +16,9 @@ namespace algoritmosAcomodoTest
     {
         try
         {
+            srand(time(NULL));
             for(int i = 0; i < longitud; i++)
-            {
-                srand(time(NULL));
                 arreglo[i] = rand() % 1000;
-            }
         }
         catch(const std::exception& ex)
         {

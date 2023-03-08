@@ -69,7 +69,7 @@
 
 1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
-1678214819 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1678254076 source:d:\repositorios\tutoriales-estructura-datos\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
 	<math.h>
 	"algoritmosAcomodo.h"
@@ -115,7 +115,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1678214967 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1678254484 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -130,6 +130,7 @@
 	"StackTest.h"
 	"BinarySearchTreeTest.h"
 	"LinkedListTest.h"
+	"algoritmosEstructurasDatos/algoritmosAcomodoTest.h"
 
 1675921628 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\binarytree.cpp
 	"BinaryTree.h"
@@ -255,7 +256,7 @@
 	<exception>
 	"LinkedListTest.h"
 
-1678157993 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
+1678254605 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
 	<iostream>
 	<exception>
 	<stdio.h>

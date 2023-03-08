@@ -111,7 +111,7 @@ namespace algoritmosAcomodo
     int* ptr_posicionCorrecta(int arreglo[], int longitud, int nuevoElemento)
     {
         if( longitud < 2 )
-          return ( nuevoElemento < arreglo[0] ? arreglo : arreglo +1 );
+          return ( nuevoElemento <= arreglo[0] ? arreglo : arreglo +1 );
 
         int indexAlMedio = longitud /2;
         if( nuevoElemento < arreglo[indexAlMedio] )
@@ -126,7 +126,7 @@ namespace algoritmosAcomodo
         for(int i = 1; i < longitud; i++)
         {
             int* ptr_elementoActual = &arreglo[i];
-            int* ptr_posicionCorrecta = algoritmosAcomodo::ptr_posicionCorrecta(arreglo, i-1, *ptr_elementoActual);
+            int* ptr_posicionCorrecta = algoritmosAcomodo::ptr_posicionCorrecta(arreglo, i, *ptr_elementoActual);
             while(ptr_elementoActual != ptr_posicionCorrecta)
             {
                 manejoArreglos::intercambiarElementos(ptr_elementoActual, ptr_elementoActual -1);
