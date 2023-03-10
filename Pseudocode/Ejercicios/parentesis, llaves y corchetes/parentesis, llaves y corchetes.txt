@@ -1,0 +1,32 @@
+do
+leer entrada
+procesar entrada, se buscarian los casos en el cual la entrada sea (, ), {, } , [ o ], en caso default, la entrada seria invalida
+checar si las pilas estan vacias ( si hay caracteres pendientes )
+while( entradaEsValida && !noHayCaracteresPendientes)
+
+
+stack parentecisPendientes, llavesPendientes, corchetesPendientes
+
+do
+  bool entradaEsValida = true, noHayCaracteresPendientes = false
+  char entrada
+  read (entrada)
+  switch(entrada)
+case '('
+  parentecisPendientes.push(entrada)
+case '{'
+  llavesPendientes.push(entrada)
+case '['
+  corchetesPendientes.push(entrada)
+case ')'
+  parentecisPendientes.pop()
+case '}'
+  llavesPendientes.pop()
+case ']'
+  corchetesPendientes.pop()
+default:
+  entradaEsValida = false
+if( parentecisPendientes.estaVacio()  && parentecisPendientes.estaVacio()  && parentecisPendientes.estaVacio() )
+  noHayCaracteresPendientes = true
+
+while( entradaEsValida && !noHayCaracteresPendientes)
