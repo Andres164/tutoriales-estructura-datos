@@ -111,27 +111,40 @@ namespace algoritmosAcomodo
     int* ptr_posicionCorrecta(int arreglo[], int longitud, int nuevoElemento)
     {
         if( longitud < 2 )
-          return ( nuevoElemento <= arreglo[0] ? arreglo : arreglo +1 );
+        {
+            if( nuevoElemento <= arreglo[0] )
+            {
+                return arreglo;
+            }
+            else
+            {
+                return arreglo +1;
+            }
+        }
 
         int indexAlMedio = longitud /2;
         if( nuevoElemento < arreglo[indexAlMedio] )
            return ptr_posicionCorrecta(arreglo, longitud/2, nuevoElemento);
 
         int* subArray = arreglo + longitud/2 +1;
-        return ptr_posicionCorrecta(subArray, std::ceil(longitud/2)-1, nuevoElemento);
+        return ptr_posicionCorrecta(subArray, ceil(longitud/2)-1, nuevoElemento);
     }
 
     void binaryInsertionSort( int arreglo[], int longitud )
     {
         for(int i = 1; i < longitud; i++)
         {
-            int* ptr_elementoActual = &arreglo[i];
+            std::cout << "Ciclo for No. " << i << std::endl;
+            int* ptr_elementoActual = arreglo + i;
             int* ptr_posicionCorrecta = algoritmosAcomodo::ptr_posicionCorrecta(arreglo, i, *ptr_elementoActual);
+            std::cout << "*ptr_posicionCorrecta: " << *ptr_posicionCorrecta << std::endl;
             while(ptr_elementoActual != ptr_posicionCorrecta)
             {
                 manejoArreglos::intercambiarElementos(ptr_elementoActual, ptr_elementoActual -1);
                 ptr_elementoActual--;
             }
+            manejoArreglos::imprimirArreglo(arreglo, longitud);
+            std::cout << std::endl;
         }
     }
 }

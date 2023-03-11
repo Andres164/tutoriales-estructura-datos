@@ -1,8 +1,6 @@
 #include <iostream>
 #include <exception>
-#include <stdio.h>
 #include <time.h>
-#include <stdlib.h>
 #include "algoritmosEstructurasDatos/algoritmosAcomodoTest.h"
 
 namespace algoritmosAcomodoTest
@@ -12,13 +10,24 @@ namespace algoritmosAcomodoTest
 
     }
 
+    bool srandEstaInicializado = false;
+
+    void inicializarSrand()
+    {
+        if( !algoritmosAcomodoTest::srandEstaInicializado )
+        {
+            srand(time(NULL));
+            srandEstaInicializado = true;
+        }
+    }
+
     void llenarSetDatosConValoresRandom(int arreglo[], int longitud)
     {
         try
         {
-            srand(time(NULL));
+            algoritmosAcomodoTest::inicializarSrand();
             for(int i = 0; i < longitud; i++)
-                arreglo[i] = rand() % 1000;
+                arreglo[i] = rand() % 2000;
         }
         catch(const std::exception& ex)
         {

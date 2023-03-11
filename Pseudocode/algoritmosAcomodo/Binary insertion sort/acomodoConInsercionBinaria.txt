@@ -1,3 +1,4 @@
+
 ptr_posicionCorrecta( int array[], int longitud, int nuevoElemento)
 if( longitud < 2 )
   return ( nuevoElemento < array[0] ? array : array +1 )

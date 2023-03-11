@@ -51,7 +51,7 @@ namespace manejoArreglos
             else
             {
                 int* subArreglo = arreglo + longitud/2 +1;
-                binaryInsert(subArreglo, std::ceil( longitud/2 -1 ), nuevoElemento);
+                binaryInsert(subArreglo, ceil( longitud/2 -1 ), nuevoElemento);
             }
         }
         catch(const std::exception& ex)

@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1678056063 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1678493061 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
 	<math.h>
 	"algoritmosAcomodo.h"
 	"manejoArreglos.h"
 
-1675535273 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
+1678425825 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
 
-1677906518 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.h
+1678425825 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
-1677906518 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
+1678469992 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.cpp
 	<iostream>
+	<math.h>
 	"manejoArreglos.h"
 
 1675645963 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\linkedlist.cpp
@@ -51,7 +52,7 @@
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1677911186 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1678492781 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -66,6 +67,7 @@
 	"StackTest.h"
 	"BinarySearchTreeTest.h"
 	"LinkedListTest.h"
+	"algoritmosEstructurasDatos/algoritmosAcomodoTest.h"
 
 1676682396 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoestructuradatos.cpp
 
@@ -265,4 +267,12 @@
 	"algoritmosEstructurasDatos/algoritmosAcomodoTest.h"
 
 1678157993 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
+
+1678076424 d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
+
+1678470871 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
+	<iostream>
+	<exception>
+	<time.h>
+	"algoritmosEstructurasDatos/algoritmosAcomodoTest.h"
 

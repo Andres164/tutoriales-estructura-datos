@@ -1,0 +1,17 @@
+mal puesto hasta el ultimo
+i = 3
+i = 3
+i = 10
+i = 2
+i = 3
+i = 0
+i = 6
+i= 0
+
+mal puesto en el medio
+i = 4 (i = 6)
+i = 4 (i = 8)
+i = 9 (i = 6)
+i = 9 (i = 5)
+
+No se encontraron patrones
