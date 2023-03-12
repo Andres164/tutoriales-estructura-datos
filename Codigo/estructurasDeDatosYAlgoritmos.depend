@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1678493061 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1678577623 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
 	<math.h>
 	"algoritmosAcomodo.h"
@@ -52,7 +52,7 @@
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1678492781 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1678584356 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -270,7 +270,7 @@
 
 1678076424 d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
 
-1678470871 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
+1678584880 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
 	<iostream>
 	<exception>
 	<time.h>

@@ -110,8 +110,12 @@ namespace algoritmosAcomodo
 
     int* ptr_posicionCorrecta(int arreglo[], int longitud, int nuevoElemento)
     {
+        //std::cout << "Longitud: " << longitud << std::endl;
+        //std::cout << "arreglo[0]: " << arreglo[0] << std::endl;
         if( longitud < 2 )
         {
+            //std::cout << longitud << "(longitud) < 2" << std::endl;
+
             if( nuevoElemento <= arreglo[0] )
             {
                 return arreglo;
@@ -126,25 +130,30 @@ namespace algoritmosAcomodo
         if( nuevoElemento < arreglo[indexAlMedio] )
            return ptr_posicionCorrecta(arreglo, longitud/2, nuevoElemento);
 
+        //std::cout << nuevoElemento << " > " << arreglo[indexAlMedio] << std::endl;
         int* subArray = arreglo + longitud/2 +1;
-        return ptr_posicionCorrecta(subArray, ceil(longitud/2)-1, nuevoElemento);
+        /*std::cout << "*subArray: " <<  *subArray << std::endl;
+        std::cout << longitud << "/2: " << longitud/2 << std::endl;
+        std::cout << "ceil(longitud/2)-1: " << ceil((float)longitud/2)-1 << std::endl;
+        */
+        return ptr_posicionCorrecta(subArray, ceil((float)longitud/2)-1, nuevoElemento);
     }
 
     void binaryInsertionSort( int arreglo[], int longitud )
     {
         for(int i = 1; i < longitud; i++)
         {
-            std::cout << "Ciclo for No. " << i << std::endl;
             int* ptr_elementoActual = arreglo + i;
+            //std::cout << "Ciclo for No. " << i << "  Acomodando: " << *ptr_elementoActual << std::endl;
             int* ptr_posicionCorrecta = algoritmosAcomodo::ptr_posicionCorrecta(arreglo, i, *ptr_elementoActual);
-            std::cout << "*ptr_posicionCorrecta: " << *ptr_posicionCorrecta << std::endl;
+            //std::cout << "*ptr_posicionCorrecta: " << *ptr_posicionCorrecta << std::endl;
             while(ptr_elementoActual != ptr_posicionCorrecta)
             {
                 manejoArreglos::intercambiarElementos(ptr_elementoActual, ptr_elementoActual -1);
                 ptr_elementoActual--;
             }
-            manejoArreglos::imprimirArreglo(arreglo, longitud);
-            std::cout << std::endl;
+            //manejoArreglos::imprimirArreglo(arreglo, longitud);
+            //std::cout << std::endl;
         }
     }
 }

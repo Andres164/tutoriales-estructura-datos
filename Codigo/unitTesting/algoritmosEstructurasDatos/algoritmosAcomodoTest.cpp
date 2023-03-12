@@ -39,7 +39,7 @@ namespace algoritmosAcomodoTest
     {
         try
         {
-            for( int i = 0; i < longitud; i++)
+            for( int i = 1; i < longitud; i++)
                 if(arreglo[i -1] > arreglo[i])
                     return false;
         }
