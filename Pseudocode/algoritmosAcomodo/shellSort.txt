@@ -1,0 +1,8 @@
+void shellSort(int array[], int longitud)
+  for(int intervalo = longitud /2; intervalo > 1 ; intervalo /= 2)
+    segundaPunta = intervalo
+    for(int i = 0; segundaPunta < longitud; i++)
+	  if ( arreglo[segundaPunta] < arreglo[i] )
+	      intercambair(arreglo, i, segundaPunta)
+          segundaPunta++
+   insertionSort(arreglo, longitud)

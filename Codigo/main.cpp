@@ -20,7 +20,7 @@ int main()
 {
     // LinkedListTest::test_TodosLosMetodos();
     //cout << LinkedListTest::test_EliminarElemento() << endl;
-    int longitud = 25000;
+    int longitud = 20000;
     int arreglo[longitud];
     for(int i = 1; i <=50; i++)
     {
@@ -28,13 +28,12 @@ int main()
         //std::cout << "----------------------- Array No. " << i << " ----------------------- " << std::endl;
         algoritmosAcomodoTest::llenarSetDatosConValoresRandom(arreglo, longitud);
         std::cout << std::endl;
-        //manejoArreglos::imprimirArreglo(arreglo, longitud);
-        algoritmosAcomodo::binaryInsertionSort(arreglo, longitud);
+        algoritmosAcomodo::shellSort(arreglo, longitud);
         std::cout << "Esta acomodado de menor a mayor? " << ( algoritmosAcomodoTest::estaElArregloAcomodadoMenorAMayor(arreglo, longitud) ? "SI" : "NO" ) << std::endl ;
         std::cout << std::endl;
         //manejoArreglos::imprimirArreglo(arreglo, longitud);
     }
-
-
-    return 0;
 }
+
+
+

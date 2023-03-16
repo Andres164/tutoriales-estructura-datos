@@ -38,7 +38,7 @@ namespace algoritmosAcomodoTest
     bool estaElArregloAcomodadoMenorAMayor(int arreglo[], int longitud)
     {
         try
-        {
+	{
             for( int i = 1; i < longitud; i++)
                 if(arreglo[i -1] > arreglo[i])
                     return false;

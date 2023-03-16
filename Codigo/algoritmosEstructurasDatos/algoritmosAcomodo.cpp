@@ -34,6 +34,21 @@ namespace algoritmosAcomodo
         }
     }
 
+    void shellSort(int arreglo[], int longitud)
+    {
+        for(int intervalo = longitud /2; intervalo > 1; intervalo /= 2)
+        {
+            int segundaPunta = intervalo;
+            for(int i = 0; segundaPunta < longitud; i++)
+            {
+                if(arreglo[segundaPunta] < arreglo[i])
+                    manejoArreglos::intercambiarElementos(arreglo, i, segundaPunta);
+                segundaPunta++;
+            }
+        }
+        insertionSort(arreglo, longitud);
+    }
+
     void mergeSort(int arreglo[], int numElementos)
     {
         int numElementosIzquierda = 1, numElementosDerecha = 1;
