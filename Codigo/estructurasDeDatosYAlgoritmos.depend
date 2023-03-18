@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1678577623 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
+1679086042 source:d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.cpp
 	<iostream>
 	<math.h>
 	"algoritmosAcomodo.h"
 	"manejoArreglos.h"
 
-1678425825 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
+1679086042 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\algoritmosacomodo.h
 
 1678425825 d:\repositorios\tutorias-data-structures\codigo\algoritmosestructurasdatos\manejoarreglos.h
 
@@ -52,7 +52,7 @@
 1675705436 source:d:\repositorios\tutorias-data-structures\codigo\estructurasdedatos\stack.cpp
 	"Stack.h"
 
-1678584356 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
+1679164984 source:d:\repositorios\tutorias-data-structures\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -266,11 +266,13 @@
 
 1678157993 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
 
-1678076424 d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
+1679163690 d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
 
-1678584880 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
+1679165999 source:d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
 	<iostream>
 	<exception>
 	<time.h>
 	"algoritmosEstructurasDatos/algoritmosAcomodoTest.h"
+	"../../algoritmosEstructurasDatos/manejoArreglos.h"
+	"../../algoritmosEstructurasDatos/algoritmosAcomodo.h"
 
