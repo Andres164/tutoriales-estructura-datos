@@ -45,6 +45,7 @@
 		<Unit filename="algoritmosEstructurasDatos/manejoArreglos.cpp" />
 		<Unit filename="algoritmosEstructurasDatos/manejoArreglos.h" />
 		<Unit filename="algoritmosEstructurasDatos/manejoEstructuraDatos.h" />
+		<Unit filename="estructurasDeDatos(C)/SimpleListNode.h" />
 		<Unit filename="estructurasDeDatos/BinarySearchTree.cpp" />
 		<Unit filename="estructurasDeDatos/BinarySearchTree.h" />
 		<Unit filename="estructurasDeDatos/BinaryTree.cpp" />
@@ -68,9 +69,6 @@
 		<Unit filename="unitTesting/algoritmosEstructurasDatos/algoritmosAcomodoTest.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
-			<code_completion />
-			<envvars />
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

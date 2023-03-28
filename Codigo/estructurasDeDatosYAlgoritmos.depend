@@ -117,7 +117,7 @@
 
 1676435510 source:d:\repositorios\tutoriales-estructura-datos\codigo\estructurasdedatos\stack.cpp
 
-1678991004 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
+1679976086 source:d:\repositorios\tutoriales-estructura-datos\codigo\main.cpp
 	<iostream>
 	<memory>
 	<exception>
@@ -258,13 +258,15 @@
 	<exception>
 	"LinkedListTest.h"
 
-1678990820 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
+1679976086 source:d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.cpp
 	<iostream>
 	<exception>
 	<time.h>
 	"algoritmosEstructurasDatos/algoritmosAcomodoTest.h"
+	"../../algoritmosEstructurasDatos/manejoArreglos.h"
+	"../../algoritmosEstructurasDatos/algoritmosAcomodo.h"
 
-1678157993 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
+1679976086 d:\repositorios\tutoriales-estructura-datos\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
 
 1679163690 d:\repositorios\tutorias-data-structures\codigo\unittesting\algoritmosestructurasdatos\algoritmosacomodotest.h
 
